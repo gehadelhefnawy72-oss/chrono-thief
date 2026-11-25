@@ -120,7 +120,7 @@ h3{margin:16px 0 8px;letter-spacing:.3em;color:var(--ac);text-shadow:0 0 10px va
 <script>
 'use strict';
 /* =====================================================================
-   CHRONO THIEF: GRAVITY HEIST — 100 levels / 10 cities (single file, no ads)
+   CHRONO THIEF: GRAVITY HEIST — 200 levels / 20 cities (single file, no ads)
    ===================================================================== */
 let W=1280,H=720;
 const $=id=>document.getElementById(id);
@@ -144,52 +144,52 @@ const LANGS=[['en','English'],['ar','العربية'],['fr','Français'],['es','
 const L={
 en:{sub:"Time only moves when you do.",play:"▶ PLAY",playL:"▶ PLAY — LEVEL {0}",shop:"UPGRADE SHOP",share:"SHARE SCORE",langB:"🌐 LANGUAGE",
 help:"<b>DESKTOP</b> — WASD / Arrows move · Mouse aim · HOLD CLICK (or SPACE) = pull · RELEASE = launch · ESC pause<br><b>MOBILE</b> — Left thumb: move · Right thumb: aim, hold to pull, release to launch<br>Pull crates and barrels with your black hole, then fling them at the guards. Survive as long as you can!",
-best:"BEST: {0}",cityS:"CITY {0} / 10",lvS:"LEVEL {0} / 100",pres:"PRESTIGE {0}",skinsH:"NEON SKINS",back:"◀ BACK",again:"▶ PLAY AGAIN",over:"GAME OVER",upgs:"UPGRADES",score:"SCORE",earned:"earned",total:"Total",left:"Levels until next city: {0}",newB:"NEW BEST!",cityDone:"CITY COMPLETE!",welcome:"WELCOME TO {0}!",lvlNote:"bigger arena, faster enemies, bigger rewards",winH1:"Congratulations!",winH2:"You finished all 100 levels!",bonus:"+5000 ◈ BONUS!",presU:"PRESTIGE {0} unlocked: more energy, +1 orbit slot, wider pull, bigger rewards, tougher cities",startP:"▶ START PRESTIGE {0}",dailyH1:"DAILY BONUS!",dailyH2:"COME BACK TOMORROW FOR MORE!",claim:"CLAIM",freeUp:"FREE UPGRADE: <b>{0}</b> +1",maxed:"All upgrades maxed: <b>+150 ◈</b> extra!",max:"MAX",upg:"UPGRADE {0} ◈",eqd:"EQUIPPED",eq:"EQUIP",buy:"BUY {0} ◈",uMass:"SINGULARITY MASS",uMassD:"Wider pull radius and reach",uOrb:"ORBIT SLOTS",uOrbD:"Carry +1 object",uEn:"ENERGY CORE",uEnD:"+20 max energy",energy:"ENERGY",orbit:"ORBIT",orbitF:"ORBIT FULL",tflow:"TIME FLOW",combo:"COMBO x{0}",paused:"PAUSED",tap:"TAP TO RESUME",click:"CLICK OR PRESS ESC TO RESUME",heart:"+♥ FREE HEART",chain:"CHAIN x{0}",shot:"SHOTGUN BLAST",multi:"MULTI-LAUNCH",launch:"LAUNCH",beat:"BEAT YOUR BEST: {0}",surv:"SURVIVE AS LONG AS YOU CAN",shareM:"I scored {0} in Chrono Thief! Can you beat me?",copied:"COPIED! ✓",copyF:"COPY FAILED",langT:"LANGUAGE",
+best:"BEST: {0}",cityS:"CITY {0} / 20",lvS:"LEVEL {0} / 200",pres:"PRESTIGE {0}",skinsH:"NEON SKINS",back:"◀ BACK",again:"▶ PLAY AGAIN",over:"GAME OVER",upgs:"UPGRADES",score:"SCORE",earned:"earned",total:"Total",left:"Levels until next city: {0}",newB:"NEW BEST!",cityDone:"CITY COMPLETE!",welcome:"WELCOME TO {0}!",lvlNote:"bigger arena, faster enemies, bigger rewards",winH1:"Congratulations!",winH2:"You finished all 200 levels!",bonus:"+5000 ◈ BONUS!",presU:"PRESTIGE {0} unlocked: more energy, +1 orbit slot, wider pull, bigger rewards, tougher cities",startP:"▶ START PRESTIGE {0}",dailyH1:"DAILY BONUS!",dailyH2:"COME BACK TOMORROW FOR MORE!",claim:"CLAIM",freeUp:"FREE UPGRADE: <b>{0}</b> +1",maxed:"All upgrades maxed: <b>+150 ◈</b> extra!",max:"MAX",upg:"UPGRADE {0} ◈",eqd:"EQUIPPED",eq:"EQUIP",buy:"BUY {0} ◈",uMass:"SINGULARITY MASS",uMassD:"Wider pull radius and reach",uOrb:"ORBIT SLOTS",uOrbD:"Carry +1 object",uEn:"ENERGY CORE",uEnD:"+20 max energy",energy:"ENERGY",orbit:"ORBIT",orbitF:"ORBIT FULL",tflow:"TIME FLOW",combo:"COMBO x{0}",paused:"PAUSED",tap:"TAP TO RESUME",click:"CLICK OR PRESS ESC TO RESUME",heart:"+♥ FREE HEART",chain:"CHAIN x{0}",shot:"SHOTGUN BLAST",multi:"MULTI-LAUNCH",launch:"LAUNCH",beat:"BEAT YOUR BEST: {0}",surv:"SURVIVE AS LONG AS YOU CAN",shareM:"I scored {0} in Chrono Thief! Can you beat me?",copied:"COPIED! ✓",copyF:"COPY FAILED",langT:"LANGUAGE",
 cities:["NEON HARBOR","ROSE ARCADE","EMBER DISTRICT","TOXIC GARDENS","LAGOON CITY","GOLD VEGAS","FROST PEAK","ULTRAVIOLET","BLOOD MOON","OMEGA CORE"],
 skins:["NEON CYAN","MAGENTA PULSE","SOLAR GOLD","TOXIC LIME","VOID VIOLET","PRISM"]},
 ar:{sub:"الوقت يتحرك فقط عندما تتحرك أنت.",play:"▶ ابدأ اللعب",playL:"▶ ابدأ — المستوى {0}",shop:"متجر التطويرات",share:"شارك نتيجتك",langB:"🌐 اللغة",
 help:"<b>الكمبيوتر</b> — WASD / الأسهم للحركة · الماوس للتصويب · اضغط باستمرار (أو SPACE) = سحب · اترك = إطلاق · ESC إيقاف مؤقت<br><b>الموبايل</b> — الإبهام الأيسر: حركة · الأيمن: تصويب، اضغط للسحب، اترك للإطلاق<br>اسحب الصناديق والبراميل بثقبك الأسود ثم اقذفها على الحراس. اصمد أطول وقت ممكن!",
-best:"الأفضل: {0}",cityS:"المدينة {0} / 10",lvS:"المستوى {0} / 100",pres:"البريستيج {0}",skinsH:"أشكال النيون",back:"◀ رجوع",again:"▶ العب مرة أخرى",over:"انتهت اللعبة",upgs:"التطويرات",score:"النتيجة",earned:"مكتسب",total:"الإجمالي",left:"مستويات حتى المدينة التالية: {0}",newB:"رقم قياسي جديد!",cityDone:"اكتملت المدينة!",welcome:"أهلاً بك في {0}!",lvlNote:"ساحة أكبر، أعداء أسرع، مكافآت أكبر",winH1:"مبروك!",winH2:"لقد أنهيت جميع المستويات الـ 100!",bonus:"+5000 ◈ مكافأة!",presU:"تم فتح البريستيج {0}: طاقة أكثر، خانة مدار إضافية، سحب أوسع، مكافآت أكبر، مدن أصعب",startP:"▶ ابدأ البريستيج {0}",dailyH1:"مكافأة يومية!",dailyH2:"عد غداً للمزيد!",claim:"استلم",freeUp:"تطوير مجاني: <b>{0}</b> +1",maxed:"كل التطويرات مكتملة: <b>+150 ◈</b> إضافية!",max:"الحد الأقصى",upg:"تطوير {0} ◈",eqd:"مُفعّل",eq:"تفعيل",buy:"شراء {0} ◈",uMass:"كتلة الثقب",uMassD:"نطاق وقوة سحب أوسع",uOrb:"خانات المدار",uOrbD:"احمل عنصراً إضافياً",uEn:"نواة الطاقة",uEnD:"+20 طاقة قصوى",energy:"الطاقة",orbit:"المدار",orbitF:"المدار ممتلئ",tflow:"تدفق الوقت",combo:"كومبو x{0}",paused:"إيقاف مؤقت",tap:"المس للمتابعة",click:"انقر أو اضغط ESC للمتابعة",heart:"+♥ قلب مجاني",chain:"سلسلة x{0}",shot:"انفجار البندقية",multi:"إطلاق متعدد",launch:"إطلاق",beat:"اكسر رقمك: {0}",surv:"اصمد أطول وقت ممكن",shareM:"حققت {0} في Chrono Thief! هل تستطيع التغلب علي؟",copied:"تم النسخ ✓",copyF:"فشل النسخ",langT:"اللغة",
+best:"الأفضل: {0}",cityS:"المدينة {0} / 20",lvS:"المستوى {0} / 200",pres:"البريستيج {0}",skinsH:"أشكال النيون",back:"◀ رجوع",again:"▶ العب مرة أخرى",over:"انتهت اللعبة",upgs:"التطويرات",score:"النتيجة",earned:"مكتسب",total:"الإجمالي",left:"مستويات حتى المدينة التالية: {0}",newB:"رقم قياسي جديد!",cityDone:"اكتملت المدينة!",welcome:"أهلاً بك في {0}!",lvlNote:"ساحة أكبر، أعداء أسرع، مكافآت أكبر",winH1:"مبروك!",winH2:"لقد أنهيت جميع المستويات الـ 200!",bonus:"+5000 ◈ مكافأة!",presU:"تم فتح البريستيج {0}: طاقة أكثر، خانة مدار إضافية، سحب أوسع، مكافآت أكبر، مدن أصعب",startP:"▶ ابدأ البريستيج {0}",dailyH1:"مكافأة يومية!",dailyH2:"عد غداً للمزيد!",claim:"استلم",freeUp:"تطوير مجاني: <b>{0}</b> +1",maxed:"كل التطويرات مكتملة: <b>+150 ◈</b> إضافية!",max:"الحد الأقصى",upg:"تطوير {0} ◈",eqd:"مُفعّل",eq:"تفعيل",buy:"شراء {0} ◈",uMass:"كتلة الثقب",uMassD:"نطاق وقوة سحب أوسع",uOrb:"خانات المدار",uOrbD:"احمل عنصراً إضافياً",uEn:"نواة الطاقة",uEnD:"+20 طاقة قصوى",energy:"الطاقة",orbit:"المدار",orbitF:"المدار ممتلئ",tflow:"تدفق الوقت",combo:"كومبو x{0}",paused:"إيقاف مؤقت",tap:"المس للمتابعة",click:"انقر أو اضغط ESC للمتابعة",heart:"+♥ قلب مجاني",chain:"سلسلة x{0}",shot:"انفجار البندقية",multi:"إطلاق متعدد",launch:"إطلاق",beat:"اكسر رقمك: {0}",surv:"اصمد أطول وقت ممكن",shareM:"حققت {0} في Chrono Thief! هل تستطيع التغلب علي؟",copied:"تم النسخ ✓",copyF:"فشل النسخ",langT:"اللغة",
 cities:["ميناء النيون","ممر الورد","حي الجمر","حدائق السم","مدينة البحيرة","ذهب فيغاس","قمة الجليد","فوق البنفسجي","قمر الدم","نواة أوميغا"],
 skins:["سماوي نيون","نبض ماجنتا","ذهب شمسي","ليموني سام","بنفسجي الفراغ","منشور"]},
 fr:{sub:"Le temps ne bouge que lorsque vous bougez.",play:"▶ JOUER",playL:"▶ JOUER — NIVEAU {0}",shop:"BOUTIQUE",share:"PARTAGER LE SCORE",langB:"🌐 LANGUE",
 help:"<b>PC</b> — WASD / Flèches : déplacer · Souris : viser · MAINTENIR CLIC (ou ESPACE) = attirer · RELÂCHER = lancer · ÉCHAP pause<br><b>MOBILE</b> — Pouce gauche : bouger · Pouce droit : viser, maintenir pour attirer, relâcher pour lancer<br>Attirez caisses et barils avec votre trou noir, puis lancez-les sur les gardes. Survivez le plus longtemps possible !",
-best:"MEILLEUR : {0}",cityS:"VILLE {0} / 10",lvS:"NIVEAU {0} / 100",pres:"PRESTIGE {0}",skinsH:"SKINS NÉON",back:"◀ RETOUR",again:"▶ REJOUER",over:"PARTIE TERMINÉE",upgs:"AMÉLIORATIONS",score:"SCORE",earned:"gagnés",total:"Total",left:"Niveaux avant la prochaine ville : {0}",newB:"NOUVEAU RECORD !",cityDone:"VILLE TERMINÉE !",welcome:"BIENVENUE À {0} !",lvlNote:"arène plus grande, ennemis plus rapides, plus de récompenses",winH1:"Félicitations !",winH2:"Vous avez terminé les 100 niveaux !",bonus:"+5000 ◈ BONUS !",presU:"PRESTIGE {0} débloqué : plus d'énergie, +1 emplacement d'orbite, attraction plus large, plus de récompenses, villes plus difficiles",startP:"▶ COMMENCER LE PRESTIGE {0}",dailyH1:"BONUS QUOTIDIEN !",dailyH2:"REVENEZ DEMAIN POUR PLUS !",claim:"RÉCLAMER",freeUp:"AMÉLIORATION GRATUITE : <b>{0}</b> +1",maxed:"Tout est au max : <b>+150 ◈</b> en plus !",max:"MAX",upg:"AMÉLIORER {0} ◈",eqd:"ÉQUIPÉ",eq:"ÉQUIPER",buy:"ACHETER {0} ◈",uMass:"MASSE DE SINGULARITÉ",uMassD:"Rayon et portée d'attraction plus grands",uOrb:"EMPLACEMENTS D'ORBITE",uOrbD:"Portez +1 objet",uEn:"NOYAU D'ÉNERGIE",uEnD:"+20 énergie max",energy:"ÉNERGIE",orbit:"ORBITE",orbitF:"ORBITE PLEINE",tflow:"FLUX DU TEMPS",combo:"COMBO x{0}",paused:"PAUSE",tap:"TOUCHEZ POUR REPRENDRE",click:"CLIQUEZ OU ÉCHAP POUR REPRENDRE",heart:"+♥ CŒUR GRATUIT",chain:"CHAÎNE x{0}",shot:"TIR DE FUSIL",multi:"MULTI-LANCER",launch:"LANCER",beat:"BATTEZ VOTRE RECORD : {0}",surv:"SURVIVEZ LE PLUS LONGTEMPS POSSIBLE",shareM:"J'ai fait {0} à Chrono Thief ! Peux-tu me battre ?",copied:"COPIÉ ! ✓",copyF:"ÉCHEC DE LA COPIE",langT:"LANGUE",
+best:"MEILLEUR : {0}",cityS:"VILLE {0} / 20",lvS:"NIVEAU {0} / 200",pres:"PRESTIGE {0}",skinsH:"SKINS NÉON",back:"◀ RETOUR",again:"▶ REJOUER",over:"PARTIE TERMINÉE",upgs:"AMÉLIORATIONS",score:"SCORE",earned:"gagnés",total:"Total",left:"Niveaux avant la prochaine ville : {0}",newB:"NOUVEAU RECORD !",cityDone:"VILLE TERMINÉE !",welcome:"BIENVENUE À {0} !",lvlNote:"arène plus grande, ennemis plus rapides, plus de récompenses",winH1:"Félicitations !",winH2:"Vous avez terminé les 200 niveaux !",bonus:"+5000 ◈ BONUS !",presU:"PRESTIGE {0} débloqué : plus d'énergie, +1 emplacement d'orbite, attraction plus large, plus de récompenses, villes plus difficiles",startP:"▶ COMMENCER LE PRESTIGE {0}",dailyH1:"BONUS QUOTIDIEN !",dailyH2:"REVENEZ DEMAIN POUR PLUS !",claim:"RÉCLAMER",freeUp:"AMÉLIORATION GRATUITE : <b>{0}</b> +1",maxed:"Tout est au max : <b>+150 ◈</b> en plus !",max:"MAX",upg:"AMÉLIORER {0} ◈",eqd:"ÉQUIPÉ",eq:"ÉQUIPER",buy:"ACHETER {0} ◈",uMass:"MASSE DE SINGULARITÉ",uMassD:"Rayon et portée d'attraction plus grands",uOrb:"EMPLACEMENTS D'ORBITE",uOrbD:"Portez +1 objet",uEn:"NOYAU D'ÉNERGIE",uEnD:"+20 énergie max",energy:"ÉNERGIE",orbit:"ORBITE",orbitF:"ORBITE PLEINE",tflow:"FLUX DU TEMPS",combo:"COMBO x{0}",paused:"PAUSE",tap:"TOUCHEZ POUR REPRENDRE",click:"CLIQUEZ OU ÉCHAP POUR REPRENDRE",heart:"+♥ CŒUR GRATUIT",chain:"CHAÎNE x{0}",shot:"TIR DE FUSIL",multi:"MULTI-LANCER",launch:"LANCER",beat:"BATTEZ VOTRE RECORD : {0}",surv:"SURVIVEZ LE PLUS LONGTEMPS POSSIBLE",shareM:"J'ai fait {0} à Chrono Thief ! Peux-tu me battre ?",copied:"COPIÉ ! ✓",copyF:"ÉCHEC DE LA COPIE",langT:"LANGUE",
 cities:["PORT NÉON","ARCADE ROSE","QUARTIER BRAISE","JARDINS TOXIQUES","VILLE LAGON","OR VEGAS","PIC GLACÉ","ULTRAVIOLET","LUNE DE SANG","CŒUR OMÉGA"],
 skins:["CYAN NÉON","PULSE MAGENTA","OR SOLAIRE","CITRON TOXIQUE","VIOLET DU VIDE","PRISME"]},
 es:{sub:"El tiempo solo avanza cuando te mueves.",play:"▶ JUGAR",playL:"▶ JUGAR — NIVEL {0}",shop:"TIENDA DE MEJORAS",share:"COMPARTIR PUNTAJE",langB:"🌐 IDIOMA",
 help:"<b>PC</b> — WASD / Flechas: mover · Ratón: apuntar · MANTÉN CLIC (o ESPACIO) = atraer · SUELTA = lanzar · ESC pausa<br><b>MÓVIL</b> — Pulgar izquierdo: mover · Pulgar derecho: apuntar, mantén para atraer, suelta para lanzar<br>Atrae cajas y barriles con tu agujero negro y lánzalos contra los guardias. ¡Sobrevive el mayor tiempo posible!",
-best:"MEJOR: {0}",cityS:"CIUDAD {0} / 10",lvS:"NIVEL {0} / 100",pres:"PRESTIGIO {0}",skinsH:"SKINS DE NEÓN",back:"◀ VOLVER",again:"▶ JUGAR DE NUEVO",over:"FIN DEL JUEGO",upgs:"MEJORAS",score:"PUNTAJE",earned:"ganados",total:"Total",left:"Niveles para la próxima ciudad: {0}",newB:"¡NUEVO RÉCORD!",cityDone:"¡CIUDAD COMPLETADA!",welcome:"¡BIENVENIDO A {0}!",lvlNote:"arena más grande, enemigos más rápidos, mayores recompensas",winH1:"¡Felicidades!",winH2:"¡Has terminado los 100 niveles!",bonus:"+5000 ◈ ¡BONO!",presU:"PRESTIGIO {0} desbloqueado: más energía, +1 ranura de órbita, atracción más amplia, mayores recompensas, ciudades más duras",startP:"▶ EMPEZAR PRESTIGIO {0}",dailyH1:"¡BONO DIARIO!",dailyH2:"¡VUELVE MAÑANA POR MÁS!",claim:"RECLAMAR",freeUp:"MEJORA GRATIS: <b>{0}</b> +1",maxed:"Todo al máximo: <b>+150 ◈</b> extra",max:"MÁX",upg:"MEJORAR {0} ◈",eqd:"EQUIPADO",eq:"EQUIPAR",buy:"COMPRAR {0} ◈",uMass:"MASA DE SINGULARIDAD",uMassD:"Mayor radio y alcance de atracción",uOrb:"RANURAS DE ÓRBITA",uOrbD:"Lleva +1 objeto",uEn:"NÚCLEO DE ENERGÍA",uEnD:"+20 energía máx.",energy:"ENERGÍA",orbit:"ÓRBITA",orbitF:"ÓRBITA LLENA",tflow:"FLUJO DE TIEMPO",combo:"COMBO x{0}",paused:"PAUSA",tap:"TOCA PARA CONTINUAR",click:"CLIC O ESC PARA CONTINUAR",heart:"+♥ CORAZÓN GRATIS",chain:"CADENA x{0}",shot:"RÁFAGA",multi:"MULTILANZAMIENTO",launch:"LANZAR",beat:"SUPERA TU RÉCORD: {0}",surv:"SOBREVIVE EL MAYOR TIEMPO POSIBLE",shareM:"¡Conseguí {0} en Chrono Thief! ¿Puedes superarme?",copied:"¡COPIADO! ✓",copyF:"ERROR AL COPIAR",langT:"IDIOMA",
+best:"MEJOR: {0}",cityS:"CIUDAD {0} / 20",lvS:"NIVEL {0} / 200",pres:"PRESTIGIO {0}",skinsH:"SKINS DE NEÓN",back:"◀ VOLVER",again:"▶ JUGAR DE NUEVO",over:"FIN DEL JUEGO",upgs:"MEJORAS",score:"PUNTAJE",earned:"ganados",total:"Total",left:"Niveles para la próxima ciudad: {0}",newB:"¡NUEVO RÉCORD!",cityDone:"¡CIUDAD COMPLETADA!",welcome:"¡BIENVENIDO A {0}!",lvlNote:"arena más grande, enemigos más rápidos, mayores recompensas",winH1:"¡Felicidades!",winH2:"¡Has terminado los 200 niveles!",bonus:"+5000 ◈ ¡BONO!",presU:"PRESTIGIO {0} desbloqueado: más energía, +1 ranura de órbita, atracción más amplia, mayores recompensas, ciudades más duras",startP:"▶ EMPEZAR PRESTIGIO {0}",dailyH1:"¡BONO DIARIO!",dailyH2:"¡VUELVE MAÑANA POR MÁS!",claim:"RECLAMAR",freeUp:"MEJORA GRATIS: <b>{0}</b> +1",maxed:"Todo al máximo: <b>+150 ◈</b> extra",max:"MÁX",upg:"MEJORAR {0} ◈",eqd:"EQUIPADO",eq:"EQUIPAR",buy:"COMPRAR {0} ◈",uMass:"MASA DE SINGULARIDAD",uMassD:"Mayor radio y alcance de atracción",uOrb:"RANURAS DE ÓRBITA",uOrbD:"Lleva +1 objeto",uEn:"NÚCLEO DE ENERGÍA",uEnD:"+20 energía máx.",energy:"ENERGÍA",orbit:"ÓRBITA",orbitF:"ÓRBITA LLENA",tflow:"FLUJO DE TIEMPO",combo:"COMBO x{0}",paused:"PAUSA",tap:"TOCA PARA CONTINUAR",click:"CLIC O ESC PARA CONTINUAR",heart:"+♥ CORAZÓN GRATIS",chain:"CADENA x{0}",shot:"RÁFAGA",multi:"MULTILANZAMIENTO",launch:"LANZAR",beat:"SUPERA TU RÉCORD: {0}",surv:"SOBREVIVE EL MAYOR TIEMPO POSIBLE",shareM:"¡Conseguí {0} en Chrono Thief! ¿Puedes superarme?",copied:"¡COPIADO! ✓",copyF:"ERROR AL COPIAR",langT:"IDIOMA",
 cities:["PUERTO NEÓN","ARCADE ROSA","DISTRITO BRASA","JARDINES TÓXICOS","CIUDAD LAGUNA","ORO VEGAS","PICO HELADO","ULTRAVIOLETA","LUNA DE SANGRE","NÚCLEO OMEGA"],
 skins:["CIAN NEÓN","PULSO MAGENTA","ORO SOLAR","LIMA TÓXICA","VIOLETA DEL VACÍO","PRISMA"]},
 de:{sub:"Die Zeit bewegt sich nur, wenn du dich bewegst.",play:"▶ SPIELEN",playL:"▶ SPIELEN — LEVEL {0}",shop:"UPGRADE-SHOP",share:"PUNKTE TEILEN",langB:"🌐 SPRACHE",
 help:"<b>PC</b> — WASD / Pfeile: bewegen · Maus: zielen · KLICK HALTEN (oder LEERTASTE) = ziehen · LOSLASSEN = werfen · ESC Pause<br><b>HANDY</b> — Linker Daumen: bewegen · Rechter Daumen: zielen, halten zum Ziehen, loslassen zum Werfen<br>Zieh Kisten und Fässer mit deinem Schwarzen Loch heran und schleudere sie auf die Wachen. Überlebe so lange du kannst!",
-best:"BESTE: {0}",cityS:"STADT {0} / 10",lvS:"LEVEL {0} / 100",pres:"PRESTIGE {0}",skinsH:"NEON-SKINS",back:"◀ ZURÜCK",again:"▶ NOCH MAL",over:"SPIEL VORBEI",upgs:"UPGRADES",score:"PUNKTE",earned:"verdient",total:"Gesamt",left:"Level bis zur nächsten Stadt: {0}",newB:"NEUER REKORD!",cityDone:"STADT GESCHAFFT!",welcome:"WILLKOMMEN IN {0}!",lvlNote:"größere Arena, schnellere Gegner, größere Belohnungen",winH1:"Glückwunsch!",winH2:"Du hast alle 100 Level geschafft!",bonus:"+5000 ◈ BONUS!",presU:"PRESTIGE {0} freigeschaltet: mehr Energie, +1 Orbit-Platz, größere Reichweite, größere Belohnungen, härtere Städte",startP:"▶ PRESTIGE {0} STARTEN",dailyH1:"TAGESBONUS!",dailyH2:"KOMM MORGEN WIEDER FÜR MEHR!",claim:"ABHOLEN",freeUp:"KOSTENLOSES UPGRADE: <b>{0}</b> +1",maxed:"Alles maximiert: <b>+150 ◈</b> extra!",max:"MAX",upg:"UPGRADE {0} ◈",eqd:"AUSGERÜSTET",eq:"AUSRÜSTEN",buy:"KAUFEN {0} ◈",uMass:"SINGULARITÄTSMASSE",uMassD:"Größerer Zugradius und Reichweite",uOrb:"ORBIT-PLÄTZE",uOrbD:"Trage +1 Objekt",uEn:"ENERGIEKERN",uEnD:"+20 max. Energie",energy:"ENERGIE",orbit:"ORBIT",orbitF:"ORBIT VOLL",tflow:"ZEITFLUSS",combo:"KOMBO x{0}",paused:"PAUSE",tap:"TIPPEN ZUM FORTSETZEN",click:"KLICKEN ODER ESC ZUM FORTSETZEN",heart:"+♥ GRATIS-HERZ",chain:"KETTE x{0}",shot:"SCHROTSCHUSS",multi:"MULTI-WURF",launch:"WURF",beat:"SCHLAGE DEINEN REKORD: {0}",surv:"ÜBERLEBE SO LANGE DU KANNST",shareM:"Ich habe {0} Punkte in Chrono Thief! Schaffst du mehr?",copied:"KOPIERT! ✓",copyF:"KOPIEREN FEHLGESCHLAGEN",langT:"SPRACHE",
+best:"BESTE: {0}",cityS:"STADT {0} / 20",lvS:"LEVEL {0} / 200",pres:"PRESTIGE {0}",skinsH:"NEON-SKINS",back:"◀ ZURÜCK",again:"▶ NOCH MAL",over:"SPIEL VORBEI",upgs:"UPGRADES",score:"PUNKTE",earned:"verdient",total:"Gesamt",left:"Level bis zur nächsten Stadt: {0}",newB:"NEUER REKORD!",cityDone:"STADT GESCHAFFT!",welcome:"WILLKOMMEN IN {0}!",lvlNote:"größere Arena, schnellere Gegner, größere Belohnungen",winH1:"Glückwunsch!",winH2:"Du hast alle 200 Level geschafft!",bonus:"+5000 ◈ BONUS!",presU:"PRESTIGE {0} freigeschaltet: mehr Energie, +1 Orbit-Platz, größere Reichweite, größere Belohnungen, härtere Städte",startP:"▶ PRESTIGE {0} STARTEN",dailyH1:"TAGESBONUS!",dailyH2:"KOMM MORGEN WIEDER FÜR MEHR!",claim:"ABHOLEN",freeUp:"KOSTENLOSES UPGRADE: <b>{0}</b> +1",maxed:"Alles maximiert: <b>+150 ◈</b> extra!",max:"MAX",upg:"UPGRADE {0} ◈",eqd:"AUSGERÜSTET",eq:"AUSRÜSTEN",buy:"KAUFEN {0} ◈",uMass:"SINGULARITÄTSMASSE",uMassD:"Größerer Zugradius und Reichweite",uOrb:"ORBIT-PLÄTZE",uOrbD:"Trage +1 Objekt",uEn:"ENERGIEKERN",uEnD:"+20 max. Energie",energy:"ENERGIE",orbit:"ORBIT",orbitF:"ORBIT VOLL",tflow:"ZEITFLUSS",combo:"KOMBO x{0}",paused:"PAUSE",tap:"TIPPEN ZUM FORTSETZEN",click:"KLICKEN ODER ESC ZUM FORTSETZEN",heart:"+♥ GRATIS-HERZ",chain:"KETTE x{0}",shot:"SCHROTSCHUSS",multi:"MULTI-WURF",launch:"WURF",beat:"SCHLAGE DEINEN REKORD: {0}",surv:"ÜBERLEBE SO LANGE DU KANNST",shareM:"Ich habe {0} Punkte in Chrono Thief! Schaffst du mehr?",copied:"KOPIERT! ✓",copyF:"KOPIEREN FEHLGESCHLAGEN",langT:"SPRACHE",
 cities:["NEON-HAFEN","ROSEN-ARKADE","GLUTVIERTEL","GIFTGÄRTEN","LAGUNENSTADT","GOLD-VEGAS","FROSTGIPFEL","ULTRAVIOLETT","BLUTMOND","OMEGA-KERN"],
 skins:["NEON-CYAN","MAGENTA-PULS","SONNENGOLD","GIFTGRÜN","LEEREN-VIOLETT","PRISMA"]},
 pt:{sub:"O tempo só se move quando você se move.",play:"▶ JOGAR",playL:"▶ JOGAR — NÍVEL {0}",shop:"LOJA DE UPGRADES",share:"COMPARTILHAR PONTUAÇÃO",langB:"🌐 IDIOMA",
 help:"<b>PC</b> — WASD / Setas: mover · Mouse: mirar · SEGURE O CLIQUE (ou ESPAÇO) = puxar · SOLTE = lançar · ESC pausa<br><b>CELULAR</b> — Polegar esquerdo: mover · Polegar direito: mirar, segure para puxar, solte para lançar<br>Puxe caixas e barris com seu buraco negro e arremesse nos guardas. Sobreviva o máximo que puder!",
-best:"MELHOR: {0}",cityS:"CIDADE {0} / 10",lvS:"NÍVEL {0} / 100",pres:"PRESTÍGIO {0}",skinsH:"SKINS NEON",back:"◀ VOLTAR",again:"▶ JOGAR DE NOVO",over:"FIM DE JOGO",upgs:"UPGRADES",score:"PONTUAÇÃO",earned:"ganhos",total:"Total",left:"Níveis até a próxima cidade: {0}",newB:"NOVO RECORDE!",cityDone:"CIDADE COMPLETA!",welcome:"BEM-VINDO A {0}!",lvlNote:"arena maior, inimigos mais rápidos, recompensas maiores",winH1:"Parabéns!",winH2:"Você terminou os 100 níveis!",bonus:"+5000 ◈ BÔNUS!",presU:"PRESTÍGIO {0} desbloqueado: mais energia, +1 espaço de órbita, puxada maior, recompensas maiores, cidades mais difíceis",startP:"▶ INICIAR PRESTÍGIO {0}",dailyH1:"BÔNUS DIÁRIO!",dailyH2:"VOLTE AMANHÃ PARA MAIS!",claim:"RESGATAR",freeUp:"UPGRADE GRÁTIS: <b>{0}</b> +1",maxed:"Tudo no máximo: <b>+150 ◈</b> extra!",max:"MÁX",upg:"MELHORAR {0} ◈",eqd:"EQUIPADO",eq:"EQUIPAR",buy:"COMPRAR {0} ◈",uMass:"MASSA DA SINGULARIDADE",uMassD:"Maior raio e alcance de puxada",uOrb:"ESPAÇOS DE ÓRBITA",uOrbD:"Carregue +1 objeto",uEn:"NÚCLEO DE ENERGIA",uEnD:"+20 energia máx.",energy:"ENERGIA",orbit:"ÓRBITA",orbitF:"ÓRBITA CHEIA",tflow:"FLUXO DO TEMPO",combo:"COMBO x{0}",paused:"PAUSADO",tap:"TOQUE PARA CONTINUAR",click:"CLIQUE OU ESC PARA CONTINUAR",heart:"+♥ CORAÇÃO GRÁTIS",chain:"CORRENTE x{0}",shot:"RAJADA",multi:"MULTI-LANÇAMENTO",launch:"LANÇAR",beat:"SUPERE SEU RECORDE: {0}",surv:"SOBREVIVA O MÁXIMO QUE PUDER",shareM:"Fiz {0} pontos no Chrono Thief! Consegue me superar?",copied:"COPIADO! ✓",copyF:"FALHA AO COPIAR",langT:"IDIOMA",
+best:"MELHOR: {0}",cityS:"CIDADE {0} / 20",lvS:"NÍVEL {0} / 200",pres:"PRESTÍGIO {0}",skinsH:"SKINS NEON",back:"◀ VOLTAR",again:"▶ JOGAR DE NOVO",over:"FIM DE JOGO",upgs:"UPGRADES",score:"PONTUAÇÃO",earned:"ganhos",total:"Total",left:"Níveis até a próxima cidade: {0}",newB:"NOVO RECORDE!",cityDone:"CIDADE COMPLETA!",welcome:"BEM-VINDO A {0}!",lvlNote:"arena maior, inimigos mais rápidos, recompensas maiores",winH1:"Parabéns!",winH2:"Você terminou os 200 níveis!",bonus:"+5000 ◈ BÔNUS!",presU:"PRESTÍGIO {0} desbloqueado: mais energia, +1 espaço de órbita, puxada maior, recompensas maiores, cidades mais difíceis",startP:"▶ INICIAR PRESTÍGIO {0}",dailyH1:"BÔNUS DIÁRIO!",dailyH2:"VOLTE AMANHÃ PARA MAIS!",claim:"RESGATAR",freeUp:"UPGRADE GRÁTIS: <b>{0}</b> +1",maxed:"Tudo no máximo: <b>+150 ◈</b> extra!",max:"MÁX",upg:"MELHORAR {0} ◈",eqd:"EQUIPADO",eq:"EQUIPAR",buy:"COMPRAR {0} ◈",uMass:"MASSA DA SINGULARIDADE",uMassD:"Maior raio e alcance de puxada",uOrb:"ESPAÇOS DE ÓRBITA",uOrbD:"Carregue +1 objeto",uEn:"NÚCLEO DE ENERGIA",uEnD:"+20 energia máx.",energy:"ENERGIA",orbit:"ÓRBITA",orbitF:"ÓRBITA CHEIA",tflow:"FLUXO DO TEMPO",combo:"COMBO x{0}",paused:"PAUSADO",tap:"TOQUE PARA CONTINUAR",click:"CLIQUE OU ESC PARA CONTINUAR",heart:"+♥ CORAÇÃO GRÁTIS",chain:"CORRENTE x{0}",shot:"RAJADA",multi:"MULTI-LANÇAMENTO",launch:"LANÇAR",beat:"SUPERE SEU RECORDE: {0}",surv:"SOBREVIVA O MÁXIMO QUE PUDER",shareM:"Fiz {0} pontos no Chrono Thief! Consegue me superar?",copied:"COPIADO! ✓",copyF:"FALHA AO COPIAR",langT:"IDIOMA",
 cities:["PORTO NEON","ARCADE ROSA","DISTRITO BRASA","JARDINS TÓXICOS","CIDADE LAGOA","OURO VEGAS","PICO GELADO","ULTRAVIOLETA","LUA DE SANGUE","NÚCLEO ÔMEGA"],
 skins:["CIANO NEON","PULSO MAGENTA","OURO SOLAR","LIMA TÓXICA","VIOLETA DO VAZIO","PRISMA"]},
 tr:{sub:"Zaman yalnızca sen hareket ettiğinde akar.",play:"▶ OYNA",playL:"▶ OYNA — SEVİYE {0}",shop:"GELİŞTİRME MAĞAZASI",share:"SKORU PAYLAŞ",langB:"🌐 DİL",
 help:"<b>PC</b> — WASD / Oklar: hareket · Fare: nişan · TIKLAYIP TUT (veya BOŞLUK) = çek · BIRAK = fırlat · ESC duraklat<br><b>MOBİL</b> — Sol başparmak: hareket · Sağ başparmak: nişan al, çekmek için basılı tut, fırlatmak için bırak<br>Kara deliğinle sandık ve varilleri çek, sonra muhafızlara fırlat. Olabildiğince uzun hayatta kal!",
-best:"EN İYİ: {0}",cityS:"ŞEHİR {0} / 10",lvS:"SEVİYE {0} / 100",pres:"PRESTİJ {0}",skinsH:"NEON KOSTÜMLER",back:"◀ GERİ",again:"▶ TEKRAR OYNA",over:"OYUN BİTTİ",upgs:"GELİŞTİRMELER",score:"SKOR",earned:"kazanıldı",total:"Toplam",left:"Sonraki şehre kalan seviye: {0}",newB:"YENİ REKOR!",cityDone:"ŞEHİR TAMAMLANDI!",welcome:"{0} ŞEHRİNE HOŞ GELDİN!",lvlNote:"daha büyük arena, daha hızlı düşmanlar, daha büyük ödüller",winH1:"Tebrikler!",winH2:"100 seviyenin hepsini bitirdin!",bonus:"+5000 ◈ BONUS!",presU:"PRESTİJ {0} açıldı: daha fazla enerji, +1 yörünge yuvası, daha geniş çekim, daha büyük ödüller, daha zor şehirler",startP:"▶ PRESTİJ {0} BAŞLAT",dailyH1:"GÜNLÜK BONUS!",dailyH2:"DAHASI İÇİN YARIN GEL!",claim:"AL",freeUp:"ÜCRETSİZ GELİŞTİRME: <b>{0}</b> +1",maxed:"Hepsi maksimum: <b>+150 ◈</b> ekstra!",max:"MAKS",upg:"GELİŞTİR {0} ◈",eqd:"KUŞANILDI",eq:"KUŞAN",buy:"SATIN AL {0} ◈",uMass:"TEKİLLİK KÜTLESİ",uMassD:"Daha geniş çekim yarıçapı ve menzili",uOrb:"YÖRÜNGE YUVALARI",uOrbD:"+1 nesne taşı",uEn:"ENERJİ ÇEKİRDEĞİ",uEnD:"+20 maks. enerji",energy:"ENERJİ",orbit:"YÖRÜNGE",orbitF:"YÖRÜNGE DOLU",tflow:"ZAMAN AKIŞI",combo:"KOMBO x{0}",paused:"DURAKLATILDI",tap:"DEVAM İÇİN DOKUN",click:"DEVAM İÇİN TIKLA VEYA ESC",heart:"+♥ ÜCRETSİZ KALP",chain:"ZİNCİR x{0}",shot:"POMPALI ATIŞ",multi:"ÇOKLU FIRLATMA",launch:"FIRLAT",beat:"REKORUNU KIR: {0}",surv:"OLABİLDİĞİNCE UZUN HAYATTA KAL",shareM:"Chrono Thief'te {0} puan yaptım! Beni geçebilir misin?",copied:"KOPYALANDI! ✓",copyF:"KOPYALANAMADI",langT:"DİL",
+best:"EN İYİ: {0}",cityS:"ŞEHİR {0} / 20",lvS:"SEVİYE {0} / 200",pres:"PRESTİJ {0}",skinsH:"NEON KOSTÜMLER",back:"◀ GERİ",again:"▶ TEKRAR OYNA",over:"OYUN BİTTİ",upgs:"GELİŞTİRMELER",score:"SKOR",earned:"kazanıldı",total:"Toplam",left:"Sonraki şehre kalan seviye: {0}",newB:"YENİ REKOR!",cityDone:"ŞEHİR TAMAMLANDI!",welcome:"{0} ŞEHRİNE HOŞ GELDİN!",lvlNote:"daha büyük arena, daha hızlı düşmanlar, daha büyük ödüller",winH1:"Tebrikler!",winH2:"200 seviyenin hepsini bitirdin!",bonus:"+5000 ◈ BONUS!",presU:"PRESTİJ {0} açıldı: daha fazla enerji, +1 yörünge yuvası, daha geniş çekim, daha büyük ödüller, daha zor şehirler",startP:"▶ PRESTİJ {0} BAŞLAT",dailyH1:"GÜNLÜK BONUS!",dailyH2:"DAHASI İÇİN YARIN GEL!",claim:"AL",freeUp:"ÜCRETSİZ GELİŞTİRME: <b>{0}</b> +1",maxed:"Hepsi maksimum: <b>+150 ◈</b> ekstra!",max:"MAKS",upg:"GELİŞTİR {0} ◈",eqd:"KUŞANILDI",eq:"KUŞAN",buy:"SATIN AL {0} ◈",uMass:"TEKİLLİK KÜTLESİ",uMassD:"Daha geniş çekim yarıçapı ve menzili",uOrb:"YÖRÜNGE YUVALARI",uOrbD:"+1 nesne taşı",uEn:"ENERJİ ÇEKİRDEĞİ",uEnD:"+20 maks. enerji",energy:"ENERJİ",orbit:"YÖRÜNGE",orbitF:"YÖRÜNGE DOLU",tflow:"ZAMAN AKIŞI",combo:"KOMBO x{0}",paused:"DURAKLATILDI",tap:"DEVAM İÇİN DOKUN",click:"DEVAM İÇİN TIKLA VEYA ESC",heart:"+♥ ÜCRETSİZ KALP",chain:"ZİNCİR x{0}",shot:"POMPALI ATIŞ",multi:"ÇOKLU FIRLATMA",launch:"FIRLAT",beat:"REKORUNU KIR: {0}",surv:"OLABİLDİĞİNCE UZUN HAYATTA KAL",shareM:"Chrono Thief'te {0} puan yaptım! Beni geçebilir misin?",copied:"KOPYALANDI! ✓",copyF:"KOPYALANAMADI",langT:"DİL",
 cities:["NEON LİMAN","GÜL ARKADI","KOR MAHALLESİ","ZEHİR BAHÇELERİ","LAGÜN ŞEHRİ","ALTIN VEGAS","BUZ ZİRVESİ","ULTRAVİYOLE","KAN AYI","OMEGA ÇEKİRDEĞİ"],
 skins:["NEON CAMGÖBEĞİ","MACENTA NABZI","GÜNEŞ ALTINI","ZEHİRLİ LİMON","BOŞLUK MORU","PRİZMA"]},
 ru:{sub:"Время движется, только когда движешься ты.",play:"▶ ИГРАТЬ",playL:"▶ ИГРАТЬ — УРОВЕНЬ {0}",shop:"МАГАЗИН УЛУЧШЕНИЙ",share:"ПОДЕЛИТЬСЯ СЧЁТОМ",langB:"🌐 ЯЗЫК",
 help:"<b>ПК</b> — WASD / стрелки: движение · Мышь: прицел · УДЕРЖИВАЙ КЛИК (или ПРОБЕЛ) = притяжение · ОТПУСТИ = бросок · ESC пауза<br><b>ТЕЛЕФОН</b> — Левый палец: движение · Правый палец: прицел, держи для притяжения, отпусти для броска<br>Притягивай ящики и бочки чёрной дырой и бросай в стражников. Продержись как можно дольше!",
-best:"РЕКОРД: {0}",cityS:"ГОРОД {0} / 10",lvS:"УРОВЕНЬ {0} / 100",pres:"ПРЕСТИЖ {0}",skinsH:"НЕОНОВЫЕ СКИНЫ",back:"◀ НАЗАД",again:"▶ ИГРАТЬ СНОВА",over:"ИГРА ОКОНЧЕНА",upgs:"УЛУЧШЕНИЯ",score:"СЧЁТ",earned:"заработано",total:"Всего",left:"Уровней до следующего города: {0}",newB:"НОВЫЙ РЕКОРД!",cityDone:"ГОРОД ПРОЙДЕН!",welcome:"ДОБРО ПОЖАЛОВАТЬ В {0}!",lvlNote:"арена больше, враги быстрее, награды выше",winH1:"Поздравляем!",winH2:"Вы прошли все 100 уровней!",bonus:"+5000 ◈ БОНУС!",presU:"ПРЕСТИЖ {0} открыт: больше энергии, +1 слот орбиты, шире притяжение, больше наград, сложнее города",startP:"▶ НАЧАТЬ ПРЕСТИЖ {0}",dailyH1:"ЕЖЕДНЕВНЫЙ БОНУС!",dailyH2:"ПРИХОДИ ЗАВТРА ЗА НОВЫМ!",claim:"ЗАБРАТЬ",freeUp:"БЕСПЛАТНОЕ УЛУЧШЕНИЕ: <b>{0}</b> +1",maxed:"Всё на максимуме: <b>+150 ◈</b> сверху!",max:"МАКС",upg:"УЛУЧШИТЬ {0} ◈",eqd:"НАДЕТО",eq:"НАДЕТЬ",buy:"КУПИТЬ {0} ◈",uMass:"МАССА СИНГУЛЯРНОСТИ",uMassD:"Больше радиус и дальность притяжения",uOrb:"СЛОТЫ ОРБИТЫ",uOrbD:"Носи +1 предмет",uEn:"ЯДРО ЭНЕРГИИ",uEnD:"+20 макс. энергии",energy:"ЭНЕРГИЯ",orbit:"ОРБИТА",orbitF:"ОРБИТА ПОЛНА",tflow:"ПОТОК ВРЕМЕНИ",combo:"КОМБО x{0}",paused:"ПАУЗА",tap:"КОСНИТЕСЬ, ЧТОБЫ ПРОДОЛЖИТЬ",click:"КЛИК ИЛИ ESC, ЧТОБЫ ПРОДОЛЖИТЬ",heart:"+♥ БЕСПЛАТНОЕ СЕРДЦЕ",chain:"ЦЕПЬ x{0}",shot:"ЗАЛП",multi:"МУЛЬТИ-БРОСОК",launch:"БРОСОК",beat:"ПОБЕЙ СВОЙ РЕКОРД: {0}",surv:"ПРОДЕРЖИСЬ КАК МОЖНО ДОЛЬШЕ",shareM:"Я набрал {0} в Chrono Thief! Сможешь побить?",copied:"СКОПИРОВАНО! ✓",copyF:"НЕ УДАЛОСЬ СКОПИРОВАТЬ",langT:"ЯЗЫК",
+best:"РЕКОРД: {0}",cityS:"ГОРОД {0} / 20",lvS:"УРОВЕНЬ {0} / 200",pres:"ПРЕСТИЖ {0}",skinsH:"НЕОНОВЫЕ СКИНЫ",back:"◀ НАЗАД",again:"▶ ИГРАТЬ СНОВА",over:"ИГРА ОКОНЧЕНА",upgs:"УЛУЧШЕНИЯ",score:"СЧЁТ",earned:"заработано",total:"Всего",left:"Уровней до следующего города: {0}",newB:"НОВЫЙ РЕКОРД!",cityDone:"ГОРОД ПРОЙДЕН!",welcome:"ДОБРО ПОЖАЛОВАТЬ В {0}!",lvlNote:"арена больше, враги быстрее, награды выше",winH1:"Поздравляем!",winH2:"Вы прошли все 200 уровней!",bonus:"+5000 ◈ БОНУС!",presU:"ПРЕСТИЖ {0} открыт: больше энергии, +1 слот орбиты, шире притяжение, больше наград, сложнее города",startP:"▶ НАЧАТЬ ПРЕСТИЖ {0}",dailyH1:"ЕЖЕДНЕВНЫЙ БОНУС!",dailyH2:"ПРИХОДИ ЗАВТРА ЗА НОВЫМ!",claim:"ЗАБРАТЬ",freeUp:"БЕСПЛАТНОЕ УЛУЧШЕНИЕ: <b>{0}</b> +1",maxed:"Всё на максимуме: <b>+150 ◈</b> сверху!",max:"МАКС",upg:"УЛУЧШИТЬ {0} ◈",eqd:"НАДЕТО",eq:"НАДЕТЬ",buy:"КУПИТЬ {0} ◈",uMass:"МАССА СИНГУЛЯРНОСТИ",uMassD:"Больше радиус и дальность притяжения",uOrb:"СЛОТЫ ОРБИТЫ",uOrbD:"Носи +1 предмет",uEn:"ЯДРО ЭНЕРГИИ",uEnD:"+20 макс. энергии",energy:"ЭНЕРГИЯ",orbit:"ОРБИТА",orbitF:"ОРБИТА ПОЛНА",tflow:"ПОТОК ВРЕМЕНИ",combo:"КОМБО x{0}",paused:"ПАУЗА",tap:"КОСНИТЕСЬ, ЧТОБЫ ПРОДОЛЖИТЬ",click:"КЛИК ИЛИ ESC, ЧТОБЫ ПРОДОЛЖИТЬ",heart:"+♥ БЕСПЛАТНОЕ СЕРДЦЕ",chain:"ЦЕПЬ x{0}",shot:"ЗАЛП",multi:"МУЛЬТИ-БРОСОК",launch:"БРОСОК",beat:"ПОБЕЙ СВОЙ РЕКОРД: {0}",surv:"ПРОДЕРЖИСЬ КАК МОЖНО ДОЛЬШЕ",shareM:"Я набрал {0} в Chrono Thief! Сможешь побить?",copied:"СКОПИРОВАНО! ✓",copyF:"НЕ УДАЛОСЬ СКОПИРОВАТЬ",langT:"ЯЗЫК",
 cities:["НЕОНОВАЯ ГАВАНЬ","РОЗОВАЯ АРКАДА","ТЛЕЮЩИЙ КВАРТАЛ","ЯДОВИТЫЕ САДЫ","ГОРОД-ЛАГУНА","ЗОЛОТОЙ ВЕГАС","ЛЕДЯНАЯ ВЕРШИНА","УЛЬТРАФИОЛЕТ","КРОВАВАЯ ЛУНА","ЯДРО ОМЕГА"],
 skins:["НЕОНОВЫЙ ЦИАН","ПУЛЬС ПУРПУРА","СОЛНЕЧНОЕ ЗОЛОТО","ЯДОВИТЫЙ ЛАЙМ","ФИОЛЕТ ПУСТОТЫ","ПРИЗМА"]},
 zh:{sub:"只有你移动时，时间才会流动。",play:"▶ 开始游戏",playL:"▶ 开始 — 第 {0} 关",shop:"升级商店",share:"分享分数",langB:"🌐 语言",
 help:"<b>电脑</b> — WASD / 方向键移动 · 鼠标瞄准 · 按住点击（或空格）= 吸引 · 松开 = 发射 · ESC 暂停<br><b>手机</b> — 左手拇指：移动 · 右手拇指：瞄准，按住吸引，松开发射<br>用黑洞吸引箱子和油桶，再把它们扔向守卫。尽可能坚持更久！",
-best:"最高分：{0}",cityS:"城市 {0} / 10",lvS:"关卡 {0} / 100",pres:"转生 {0}",skinsH:"霓虹皮肤",back:"◀ 返回",again:"▶ 再玩一次",over:"游戏结束",upgs:"升级",score:"分数",earned:"已获得",total:"总计",left:"距离下一座城市还有 {0} 关",newB:"新纪录！",cityDone:"城市完成！",welcome:"欢迎来到{0}！",lvlNote:"更大的场地、更快的敌人、更多奖励",winH1:"恭喜！",winH2:"你通关了全部 100 关！",bonus:"+5000 ◈ 奖励！",presU:"转生 {0} 已解锁：更多能量、+1 轨道槽、更广的吸引范围、更多奖励、更难的城市",startP:"▶ 开始转生 {0}",dailyH1:"每日奖励！",dailyH2:"明天再来领取更多！",claim:"领取",freeUp:"免费升级：<b>{0}</b> +1",maxed:"全部升满：额外 <b>+150 ◈</b>！",max:"已满",upg:"升级 {0} ◈",eqd:"已装备",eq:"装备",buy:"购买 {0} ◈",uMass:"奇点质量",uMassD:"更大的吸引半径和范围",uOrb:"轨道槽",uOrbD:"多携带 1 个物体",uEn:"能量核心",uEnD:"+20 最大能量",energy:"能量",orbit:"轨道",orbitF:"轨道已满",tflow:"时间流速",combo:"连击 x{0}",paused:"已暂停",tap:"点击继续",click:"点击或按 ESC 继续",heart:"+♥ 免费生命",chain:"连锁 x{0}",shot:"霰弹冲击",multi:"多重发射",launch:"发射",beat:"打破你的纪录：{0}",surv:"尽可能坚持更久",shareM:"我在 Chrono Thief 得了 {0} 分！你能超过我吗？",copied:"已复制！✓",copyF:"复制失败",langT:"语言",
+best:"最高分：{0}",cityS:"城市 {0} / 20",lvS:"关卡 {0} / 200",pres:"转生 {0}",skinsH:"霓虹皮肤",back:"◀ 返回",again:"▶ 再玩一次",over:"游戏结束",upgs:"升级",score:"分数",earned:"已获得",total:"总计",left:"距离下一座城市还有 {0} 关",newB:"新纪录！",cityDone:"城市完成！",welcome:"欢迎来到{0}！",lvlNote:"更大的场地、更快的敌人、更多奖励",winH1:"恭喜！",winH2:"你通关了全部 200 关！",bonus:"+5000 ◈ 奖励！",presU:"转生 {0} 已解锁：更多能量、+1 轨道槽、更广的吸引范围、更多奖励、更难的城市",startP:"▶ 开始转生 {0}",dailyH1:"每日奖励！",dailyH2:"明天再来领取更多！",claim:"领取",freeUp:"免费升级：<b>{0}</b> +1",maxed:"全部升满：额外 <b>+150 ◈</b>！",max:"已满",upg:"升级 {0} ◈",eqd:"已装备",eq:"装备",buy:"购买 {0} ◈",uMass:"奇点质量",uMassD:"更大的吸引半径和范围",uOrb:"轨道槽",uOrbD:"多携带 1 个物体",uEn:"能量核心",uEnD:"+20 最大能量",energy:"能量",orbit:"轨道",orbitF:"轨道已满",tflow:"时间流速",combo:"连击 x{0}",paused:"已暂停",tap:"点击继续",click:"点击或按 ESC 继续",heart:"+♥ 免费生命",chain:"连锁 x{0}",shot:"霰弹冲击",multi:"多重发射",launch:"发射",beat:"打破你的纪录：{0}",surv:"尽可能坚持更久",shareM:"我在 Chrono Thief 得了 {0} 分！你能超过我吗？",copied:"已复制！✓",copyF:"复制失败",langT:"语言",
 cities:["霓虹港","玫瑰拱廊","余烬区","毒花园","潟湖城","黄金维加斯","冰霜峰","极紫外","血月","欧米茄核心"],
 skins:["霓虹青","品红脉冲","太阳金","剧毒青柠","虚空紫","棱镜"]},
 ja:{sub:"あなたが動く時だけ、時間は進む。",play:"▶ プレイ",playL:"▶ プレイ — レベル {0}",shop:"アップグレードショップ",share:"スコアを共有",langB:"🌐 言語",
 help:"<b>PC</b> — WASD / 矢印キーで移動 · マウスで照準 · クリック長押し（またはスペース）= 引き寄せ · 離す = 発射 · ESC 一時停止<br><b>スマホ</b> — 左親指：移動 · 右親指：照準、長押しで引き寄せ、離して発射<br>ブラックホールで箱や樽を引き寄せ、ガードに投げつけよう。できるだけ長く生き残れ！",
-best:"ベスト：{0}",cityS:"シティ {0} / 10",lvS:"レベル {0} / 100",pres:"プレステージ {0}",skinsH:"ネオンスキン",back:"◀ 戻る",again:"▶ もう一度",over:"ゲームオーバー",upgs:"アップグレード",score:"スコア",earned:"獲得",total:"合計",left:"次のシティまであと {0} レベル",newB:"新記録！",cityDone:"シティクリア！",welcome:"{0} へようこそ！",lvlNote:"より広いアリーナ、より速い敵、より大きな報酬",winH1:"おめでとう！",winH2:"全100レベルをクリアしました！",bonus:"+5000 ◈ ボーナス！",presU:"プレステージ {0} 解放：エネルギー増加、軌道スロット+1、引き寄せ範囲拡大、報酬増加、さらに難しいシティ",startP:"▶ プレステージ {0} を開始",dailyH1:"デイリーボーナス！",dailyH2:"また明日来てね！",claim:"受け取る",freeUp:"無料アップグレード：<b>{0}</b> +1",maxed:"すべて最大：さらに <b>+150 ◈</b>！",max:"最大",upg:"強化 {0} ◈",eqd:"装備中",eq:"装備",buy:"購入 {0} ◈",uMass:"特異点の質量",uMassD:"引き寄せ半径と射程が拡大",uOrb:"軌道スロット",uOrbD:"+1個多く運べる",uEn:"エネルギーコア",uEnD:"最大エネルギー+20",energy:"エネルギー",orbit:"軌道",orbitF:"軌道いっぱい",tflow:"時間の流れ",combo:"コンボ x{0}",paused:"一時停止",tap:"タップで再開",click:"クリックまたはESCで再開",heart:"+♥ 無料ハート",chain:"チェーン x{0}",shot:"ショットガン",multi:"マルチ発射",launch:"発射",beat:"ベスト更新を狙え：{0}",surv:"できるだけ長く生き残れ",shareM:"Chrono Thiefで{0}点！超えられるかな？",copied:"コピー完了！✓",copyF:"コピー失敗",langT:"言語",
+best:"ベスト：{0}",cityS:"シティ {0} / 20",lvS:"レベル {0} / 200",pres:"プレステージ {0}",skinsH:"ネオンスキン",back:"◀ 戻る",again:"▶ もう一度",over:"ゲームオーバー",upgs:"アップグレード",score:"スコア",earned:"獲得",total:"合計",left:"次のシティまであと {0} レベル",newB:"新記録！",cityDone:"シティクリア！",welcome:"{0} へようこそ！",lvlNote:"より広いアリーナ、より速い敵、より大きな報酬",winH1:"おめでとう！",winH2:"全200レベルをクリアしました！",bonus:"+5000 ◈ ボーナス！",presU:"プレステージ {0} 解放：エネルギー増加、軌道スロット+1、引き寄せ範囲拡大、報酬増加、さらに難しいシティ",startP:"▶ プレステージ {0} を開始",dailyH1:"デイリーボーナス！",dailyH2:"また明日来てね！",claim:"受け取る",freeUp:"無料アップグレード：<b>{0}</b> +1",maxed:"すべて最大：さらに <b>+150 ◈</b>！",max:"最大",upg:"強化 {0} ◈",eqd:"装備中",eq:"装備",buy:"購入 {0} ◈",uMass:"特異点の質量",uMassD:"引き寄せ半径と射程が拡大",uOrb:"軌道スロット",uOrbD:"+1個多く運べる",uEn:"エネルギーコア",uEnD:"最大エネルギー+20",energy:"エネルギー",orbit:"軌道",orbitF:"軌道いっぱい",tflow:"時間の流れ",combo:"コンボ x{0}",paused:"一時停止",tap:"タップで再開",click:"クリックまたはESCで再開",heart:"+♥ 無料ハート",chain:"チェーン x{0}",shot:"ショットガン",multi:"マルチ発射",launch:"発射",beat:"ベスト更新を狙え：{0}",surv:"できるだけ長く生き残れ",shareM:"Chrono Thiefで{0}点！超えられるかな？",copied:"コピー完了！✓",copyF:"コピー失敗",langT:"言語",
 cities:["ネオン港","ローズアーケード","燼の街区","毒の庭園","ラグーンシティ","ゴールドベガス","氷霜の峰","ウルトラバイオレット","ブラッドムーン","オメガコア"],
 skins:["ネオンシアン","マゼンタパルス","ソーラーゴールド","トキシックライム","ボイドバイオレット","プリズム"]}
 };
@@ -199,33 +199,45 @@ function T(k,...a){
   if(typeof s!=='string')return s;
   return s.replace(/\{(\d+)\}/g,(m,i)=>a[i]!==undefined?a[i]:m);
 }
-const cityName=t=>((L[LANG]&&L[LANG].cities)||L.en.cities)[Math.max(0,Math.min(9,t))];
+const CITIES2={en:['SAKURA STORM','DEEP OCEAN','SOLAR FLARE','JADE TEMPLE','CRIMSON DESERT','CYBER PUNK','AURORA','STORM CLOUD','VOID RIFT','INFINITY'],
+ar:['عاصفة الساكورا','أعماق المحيط','توهج الشمس','معبد اليشم','الصحراء القرمزية','سايبر بانك','الشفق القطبي','سحابة العاصفة','صدع الفراغ','اللانهاية']};
+const cityName=t=>{t=Math.max(0,Math.min(19,t|0));if(t<10)return((L[LANG]&&L[LANG].cities)||L.en.cities)[t];return(CITIES2[LANG]||CITIES2.en)[t-10]};
 const skinName=i=>((L[LANG]&&L[LANG].skins)||L.en.skins)[i];
 
 
-/* ---------------- Themes (change every 10 games) ---------------- */
+/* ---------------- Themes (change every 10 games) — 20 cities, each with its own colors ---------------- */
 const THEMES=[
- {n:'NEON HARBOR',    ac:'#00e5ff',ac2:'#2b7bff',bg1:'#040820',bg2:'#0a1c4a',star:'#bfe9ff',en:['#4f8dff','#7a6bff','#3fe0ff'],bc:'#ff5fa2'},
- {n:'ROSE ARCADE',    ac:'#ff4fa8',ac2:'#ff2bd6',bg1:'#1f0414',bg2:'#4a0a30',star:'#ffd0ec',en:['#ff4fd8','#ff8ac0','#ffd1f5'],bc:'#ffe14d'},
- {n:'EMBER DISTRICT', ac:'#ff7a1a',ac2:'#ffb02e',bg1:'#1f0c02',bg2:'#4a2204',star:'#ffd9b0',en:['#ff8a1a','#ffc23a','#fff0a0'],bc:'#5fe8ff'},
- {n:'TOXIC GARDENS',  ac:'#b6ff2b',ac2:'#2bff7a',bg1:'#031508',bg2:'#0b3315',star:'#e6ffb0',en:['#e8ff3a','#4dff7a','#a6ffd0'],bc:'#ff5b5b'},
- {n:'LAGOON CITY',    ac:'#2bffd0',ac2:'#00a8c8',bg1:'#02161a',bg2:'#06353a',star:'#c4fff1',en:['#ff2bd6','#ff7ae8','#ffd1f5'],bc:'#fff04a'},
- {n:'GOLD VEGAS',     ac:'#ffd23a',ac2:'#e8b000',bg1:'#0a0a0a',bg2:'#2e2600',star:'#fff0c0',en:['#ffffff','#ff6a3a','#ffb02e'],bc:'#ff3a6a'},
- {n:'FROST PEAK',     ac:'#9be7ff',ac2:'#e8fbff',bg1:'#0e1e2e',bg2:'#2c5a7a',star:'#ffffff',en:['#ffffff','#9bb8ff','#c9f3ff'],bc:'#ff6a6a'},
- {n:'ULTRAVIOLET',    ac:'#c46bff',ac2:'#a6ff2b',bg1:'#0c0420',bg2:'#26106a',star:'#e6ccff',en:['#a6ff2b','#6bff9a','#e0ff6b'],bc:'#ff7ad9'},
- {n:'BLOOD MOON',     ac:'#ff1744',ac2:'#ff7a90',bg1:'#1a0008',bg2:'#4d0016',star:'#ffc0cc',en:['#ff1744','#ff6a3a','#ffd23a'],bc:'#ffffff'},
- {n:'OMEGA CORE',     ac:'#ffffff',ac2:'#ff1744',bg1:'#000000',bg2:'#222230',star:'#ffffff',en:['#ffffff','#ff1744','#ffd23a'],bc:'#00e5ff'}
+ {n:'NEON HARBOR',    ac:'#00e5ff',ac2:'#2b7bff',bg1:'#040820',bg2:'#0a1c4a',star:'#bfe9ff',en:['#ff2e63','#ff7a1a','#ffd23a'],bc:'#ff9bd0',sc:'#7fb2ff',bl:'#b6ff2b'},
+ {n:'ROSE ARCADE',    ac:'#ff4fa8',ac2:'#ff2bd6',bg1:'#1f0414',bg2:'#4a0a30',star:'#ffd0ec',en:['#7dff4a','#fff04a','#4affd8'],bc:'#ffe14d',sc:'#ffa8d8',bl:'#c08aff'},
+ {n:'EMBER DISTRICT', ac:'#ff7a1a',ac2:'#ffb02e',bg1:'#1f0c02',bg2:'#4a2204',star:'#ffd9b0',en:['#3ad8ff','#a06bff','#ffffff'],bc:'#9be7ff',sc:'#ffcf8a',bl:'#ff5a3a'},
+ {n:'TOXIC GARDENS',  ac:'#b6ff2b',ac2:'#2bff7a',bg1:'#031508',bg2:'#0b3315',star:'#e6ffb0',en:['#ff3b3b','#ff8a2b','#ff5fd0'],bc:'#ffd23a',sc:'#9bffc0',bl:'#ffe14d'},
+ {n:'LAGOON CITY',    ac:'#2bffd0',ac2:'#00a8c8',bg1:'#02161a',bg2:'#06353a',star:'#c4fff1',en:['#ff2bd6','#ff7ae8','#ffd1f5'],bc:'#fff04a',sc:'#7de8ff',bl:'#ffb347'},
+ {n:'GOLD VEGAS',     ac:'#ffd23a',ac2:'#e8b000',bg1:'#0a0a0a',bg2:'#2e2600',star:'#fff0c0',en:['#ff2a4a','#ffffff','#ff6a3a'],bc:'#7dffea',sc:'#ffe89a',bl:'#ff4a6a'},
+ {n:'FROST PEAK',     ac:'#9be7ff',ac2:'#e8fbff',bg1:'#0e1e2e',bg2:'#2c5a7a',star:'#ffffff',en:['#ff4a6a','#ff9a3a','#ffd23a'],bc:'#ffb36a',sc:'#d8f4ff',bl:'#7aa8ff'},
+ {n:'ULTRAVIOLET',    ac:'#c46bff',ac2:'#a6ff2b',bg1:'#0c0420',bg2:'#26106a',star:'#e6ccff',en:['#a6ff2b','#6bff9a','#e0ff6b'],bc:'#ff7ad9',sc:'#e0b8ff',bl:'#ffa64a'},
+ {n:'BLOOD MOON',     ac:'#ff1744',ac2:'#ff7a90',bg1:'#1a0008',bg2:'#4d0016',star:'#ffc0cc',en:['#ffffff','#ffd23a','#ff9a3a'],bc:'#ffb0c0',sc:'#ffb0b8',bl:'#7dffea'},
+ {n:'OMEGA CORE',     ac:'#ffffff',ac2:'#ff1744',bg1:'#000000',bg2:'#222230',star:'#ffffff',en:['#ffd23a','#00e5ff','#ff5fd0'],bc:'#ff1744',sc:'#e8e8f0',bl:'#ff1744'},
+ {n:'SAKURA STORM',   ac:'#ffb3d9',ac2:'#ff6bb0',bg1:'#1a0a24',bg2:'#46164f',star:'#ffe6f2',en:['#4affc0','#7dff4a','#fff04a'],bc:'#ffffff',sc:'#ffd0e8',bl:'#9b8aff'},
+ {n:'DEEP OCEAN',     ac:'#00d4ff',ac2:'#0066ff',bg1:'#00060f',bg2:'#032a52',star:'#8fdcff',en:['#ff7a3a','#ffd23a','#ff4a6a'],bc:'#ffe14d',sc:'#5fd0ff',bl:'#ff9a4a'},
+ {n:'SOLAR FLARE',    ac:'#ffe14d',ac2:'#ff7a00',bg1:'#1f0600',bg2:'#5a1a00',star:'#fff0b0',en:['#3a8aff','#7a5bff','#3affd8'],bc:'#7dd8ff',sc:'#fff0a0',bl:'#ff4a2a'},
+ {n:'JADE TEMPLE',    ac:'#4affa8',ac2:'#ffd23a',bg1:'#021a10',bg2:'#0a4a2a',star:'#d0ffe6',en:['#ff4a4a','#ff9a2b','#ffe14d'],bc:'#ff7ad9',sc:'#a0ffd0',bl:'#ffd23a'},
+ {n:'CRIMSON DESERT', ac:'#ffb36a',ac2:'#ff4a2a',bg1:'#240a04',bg2:'#6a2a10',star:'#ffe0b8',en:['#2affd8','#4a9aff','#e0ff4a'],bc:'#7dfff0',sc:'#ffd8a0',bl:'#4a9aff'},
+ {n:'CYBER PUNK',     ac:'#ff2bd6',ac2:'#ffe14d',bg1:'#0a0220',bg2:'#2a0a5a',star:'#ffb8f0',en:['#2affea','#7aff2b','#ffffff'],bc:'#2affea',sc:'#ff9af0',bl:'#ffe14d'},
+ {n:'AURORA',         ac:'#6bffb0',ac2:'#b06bff',bg1:'#02101c',bg2:'#0a3a4a',star:'#d0fff0',en:['#ff4a8a','#ffd23a','#ff7a3a'],bc:'#ffe14d',sc:'#b0ffd8',bl:'#d08aff'},
+ {n:'STORM CLOUD',    ac:'#c0d0ff',ac2:'#ffe14d',bg1:'#0c0e18',bg2:'#2a3050',star:'#e8eeff',en:['#ff3a4a','#ff8a3a','#ff4ad0'],bc:'#ffe14d',sc:'#d8e0ff',bl:'#ffe14d'},
+ {n:'VOID RIFT',      ac:'#a06bff',ac2:'#ffffff',bg1:'#000000',bg2:'#1a0a3a',star:'#d8c0ff',en:['#ffe14d','#ff4a8a','#4affd8'],bc:'#ffffff',sc:'#c0a0ff',bl:'#4affd8'},
+ {n:'INFINITY',       ac:'#ffd23a',ac2:'#ff4ad8',bg1:'#05000f',bg2:'#2a0a4a',star:'#ffffff',en:['#ffffff','#4affea','#ff4a4a'],bc:'#ffd23a',sc:'#fff0a0',bl:'#ff4ad8'}
 ];
 const ECOL={grunt:'#ff3860',heavy:'#ff9a2b',drone:'#c46bff'};
 const ICOL={safe:'#7fb2ff',barrel:'#b6ff2b',drone:'#c46bff',bullet:'#ff5577'};
 let TH=THEMES[0];
 const tierOf=g=>Math.floor((g-1)/10);
 function applyTheme(tier){
-  tier=Math.max(0,Math.min(9,tier|0));
-  arenaK=1+.09*tier;           /* arena grows every city */
-  TH=Object.assign({},THEMES[tier]);
+  tier=Math.max(0,Math.min(19,tier|0));
+  arenaK=1+.048*tier;           /* arena grows every city */
+  TH=Object.assign({},THEMES[tier]);TH.t=tier;
   TH.acr=hexRgb(TH.ac);TH.ac2r=hexRgb(TH.ac2);
-  ECOL.grunt='#ff1f2d';ECOL.heavy='#e60012';ECOL.drone='#ff4d4d';ICOL.drone='#ff4d4d';   /* enemies are always RED */ICOL.bullet=TH.bc;
+  ECOL.grunt=TH.en[0];ECOL.heavy=TH.en[1];ECOL.drone=TH.en[2];ICOL.drone=TH.en[2];ICOL.safe=TH.sc;ICOL.barrel=TH.bl;ICOL.bullet=TH.bc;
   const s=document.documentElement.style;
   s.setProperty('--ac',TH.ac);s.setProperty('--ac2',TH.ac2);s.setProperty('--acr',TH.acr);s.setProperty('--ac2r',TH.ac2r);s.setProperty('--bg',TH.bg1);
   resize();
@@ -234,11 +246,11 @@ function applyTheme(tier){
 /* ---------------- Difficulty (by game number) ---------------- */
 function diffFor(g){
   const t=tierOf(g),k=((g-1)%10)/9,p=Math.max(1,(typeof SAVE_P==='function'?SAVE_P():1)),pm=1+.08*(p-1);
-  const spd=Math.min(2.6,(.5+t*.16+.1*k)*pm);          /* enemies faster each city */
-  const hp=(t===0?.5:.6+t*.12+.1*k)*pm;
-  const sp=Math.min(3.2,(.55+t*.2+.1*k)*pm);           /* more enemies, faster spawn timer */
-  const coin=2+t*.4+.2*k;                              /* bigger rewards each city */
-  const ct=Math.max(1.9,3.4-t*.16);                    /* combo timer gets tighter */
+  const spd=Math.min(2.6,(.5+t*.095+.1*k)*pm);         /* enemies faster each city (20 cities) */
+  const hp=(t===0?.5:.6+t*.068+.1*k)*pm;
+  const sp=Math.min(3.2,(.55+t*.105+.1*k)*pm);         /* more enemies, faster spawn timer */
+  const coin=2+t*.2+.2*k;                              /* bigger rewards each city */
+  const ct=Math.max(1.9,3.4-t*.08);                    /* combo timer gets tighter */
   return{t,spd,hp,sp,coin,ct,lvl:g};
 }
 let SAVE_P=()=>1;
@@ -256,7 +268,7 @@ const SKINS=[
 const SAVE0={credits:0,mass:0,orbit:0,energy:0,owned:[0],skin:0,level:1,hi:0,games:0,lastDaily:'',prestige:1,muted:false,lang:'en'};
 let SAVE=Object.assign({},SAVE0,{owned:[0]});
 function load(){try{const s=JSON.parse(localStorage.getItem('chronoThiefGH_v1')||'null');if(s)Object.assign(SAVE,s)}catch(e){}
-  SAVE.games=Math.max(0,Math.min(99,SAVE.games|0));SAVE.prestige=Math.max(1,SAVE.prestige|0);SAVE.level=tierOf(SAVE.games+1)+1}
+  SAVE.games=Math.max(0,Math.min(199,SAVE.games|0));SAVE.prestige=Math.max(1,SAVE.prestige|0);SAVE.level=tierOf(SAVE.games+1)+1}
 function save(){try{SAVE.level=tierOf(SAVE.games+1)+1;localStorage.setItem('chronoThiefGH_v1',JSON.stringify(SAVE))}catch(e){}}
 load();
 LANG=(L[SAVE.lang]?SAVE.lang:'en');
@@ -437,14 +449,14 @@ function addE(t,x,y){
   E.push(e);return e;
 }
 function addProp(k,x,y){PR.push({k,x,y,vx:0,vy:0,r:k==='safe'?22:15,fuse:-1,dead:false,rot:rnd(0,6),vr:rnd(-1,1)})}
-/* ONE SIDE ONLY: player lives on the RIGHT, every enemy enters from the LEFT edge */
+/* SWAPPED SIDES: player lives on the LEFT, every enemy enters from the RIGHT edge */
 /* layout: 'V' portrait = player TOP / enemies BOTTOM; 'R' rotated-portrait = same on screen; 'L' landscape = player RIGHT / enemies LEFT */
 const LAY=()=>ROT?'R':(VW<VH?'V':'L');
-const homePos=()=>{const m=LAY()==='V'?Math.min(90,H*.08):Math.min(90,W*.08),l=LAY();return l==='V'?[W/2,m]:l==='R'?[m,H/2]:[W-m,H/2]};
-const epPos=()=>{const l=LAY(),m=l==='V'?Math.max(70,H*.14):Math.max(70,W*.14);return l==='V'?[W/2,H-m]:l==='R'?[W-m,H/2]:[m,H/2]};
-function edgePos(r){const l=LAY();return l==='V'?[rnd(r+4,W-r-4),H-r-6]:l==='R'?[W-r-6,rnd(r+4,H-r-4)]:[r+6,rnd(r+4,H-r-4)]}
-const QUOTAS=[5,8,12,16,20,24,28,32,36,40];            /* kills needed: +every 10 games */
-const quotaFor=g=>QUOTAS[Math.max(0,Math.min(9,tierOf(g)))];
+const homePos=()=>{const l=LAY(),m=l==='V'?Math.min(90,H*.08):Math.min(90,W*.08);return l==='V'?[W/2,H-m]:l==='R'?[W-m,H/2]:[m,H/2]};
+const epPos=()=>{const l=LAY(),m=l==='V'?Math.max(70,H*.14):Math.max(70,W*.14);return l==='V'?[W/2,m]:l==='R'?[m,H/2]:[W-m,H/2]};
+function edgePos(r){const l=LAY();return l==='V'?[rnd(r+4,W-r-4),r+6]:l==='R'?[r+6,rnd(r+4,H-r-4)]:[W-r-6,rnd(r+4,H-r-4)]}
+const QUOTAS=[5,7,9,11,13,16,19,22,25,28,31,34,37,40,43,46,49,52,55,60];   /* kills needed: harder every 10 games */
+const quotaFor=g=>QUOTAS[Math.max(0,Math.min(19,tierOf(g)))];
 function epOpenNow(){return D.t===0||G.kills>=G.need}   /* games 1-10: open from start; later: after the quota */
 function spawnEnemy(){
   const t=D.t,r=Math.random();let type='grunt';
@@ -462,18 +474,18 @@ function startRun(){
   Object.assign(G,{ts:.05,hs:0,shake:0,flash:0,combo:0,comboT:0,chain:0,chainT:0,score:0,earned:0,kills:0,gt:0,spT:1.5,supT:4,newBest:false,cb:null,spd:D.spd,ch:null,need:G.gn<=10?0:quotaFor(G.gn),ep:{x:epPos()[0],y:epPos()[1],r:34,got:false,was:false,t:0}});
   IN.down=false;
   for(let i=0,n0=2+Math.floor(D.t/3);i<n0;i++)spawnEnemy();
-  const nb=4+Math.round(D.t*.7),ns=4+Math.round(D.t*.5);
+  const nb=4+Math.round(D.t*.45),ns=4+Math.round(D.t*.32);
   for(let i=0;i<nb;i++)addProp('barrel',rnd(60,W-60),rnd(60,H-60));
   for(let i=0;i<ns;i++)addProp('safe',rnd(60,W-60),rnd(60,H-60));
-  for(const p of PR){if(hyp(p.x-P.x,p.y-P.y)<80){p.x=clamp(p.x+120,60,W-60)}}
-  const first=SAVE.games%10===0;
+  for(const p of PR){const dx=p.x-P.x,dy=p.y-P.y,d=hyp(dx,dy)||1;if(d<80){p.x=clamp(P.x+dx/d*130,60,W-60);p.y=clamp(P.y+dy/d*130,60,H-60)}}
+  const first=SAVE.games%10===0;if(first){G.flash=.8;confetti(60)}
   G.banner={txt:T('lvS',G.gn),sub:first?(T('cityS',D.t+1)+': '+cityName(D.t)+(SAVE.prestige>1?' · '+T('pres',SAVE.prestige):'')):(SAVE.hi>0?T('beat',SAVE.hi):T('surv')),t:2.6};
   G.tut=(SAVE.games===0&&SAVE.prestige<2&&SAVE.hi===0)?{shown:0,pending:-1,fade:0,moveDone:false,holdDone:false}:null;
   gameplayStart();
 }
 
 /* ---------------- Combat helpers ---------------- */
-function mult(){const b=G.combo>=8?6:1+Math.floor(G.combo/2);return Math.max(1,Math.round(b*(1+D.t*.12)))}
+function mult(){const b=G.combo>=8?6:1+Math.floor(G.combo/2);return Math.max(1,Math.round(b*(1+D.t*.06)))}
 function comboAdd(val,x,y){
   G.combo++;G.comboT=D.ct;const m=mult();G.score+=val*m;
   let cr=Math.round(val*m*.6*D.coin*PW());
@@ -527,7 +539,7 @@ function finishGame(){
   if(G.score>SAVE.hi)SAVE.hi=G.score;
   SAVE.games++;
   let won=false;
-  if(SAVE.games>=100){won=true;SAVE.credits+=5000;SAVE.prestige=(SAVE.prestige||1)+1;SAVE.games=0;SAVE.wins=(SAVE.wins||0)+1}
+  if(SAVE.games>=200){won=true;SAVE.credits+=5000;SAVE.prestige=(SAVE.prestige||1)+1;SAVE.games=0;SAVE.wins=(SAVE.wins||0)+1}
   save();sfx.win();confetti(60);
   const lvlUp=!won&&SAVE.games%10===0;
   G.banner={txt:'GAME COMPLETE!',sub:won||lvlUp?'':'Next game starting...',t:1.6};
@@ -778,7 +790,7 @@ function play(dt){
    if(open&&!ep.was){ep.was=true;if(D.t>0){sfx.win();G.banner={txt:'END POINT OPEN!',sub:'Go to it, collect it, then return',t:2.4};burst(ep.x,ep.y,TH.ac2,30,300,.8)}}
    if(open&&!ep.got&&hyp(P.x-ep.x,P.y-ep.y)<ep.r+P.r){ep.got=true;sfx.combo();popup(ep.x,ep.y-40,'COLLECTED!','#ffd23a',24);burst(ep.x,ep.y,'#ffd23a',40,380,.9);
      if(G.gn>=11){{const c0=chaseDir(),tx=c0.ux>0?ep.x/c0.ux:c0.ux<0?(W-ep.x)/-c0.ux:1e9,ty=c0.uy>0?ep.y/c0.uy:c0.uy<0?(H-ep.y)/-c0.uy:1e9;G.ch={d:-Math.min(tx,ty)+14}}G.banner={txt:'RUN!',sub:'The red wall is chasing you',t:2};sfx.laser();G.shake=Math.max(G.shake,10)}}
-   if(G.ch&&G.ep.got){const c=chaseDir(),pspd=300*(1+.5*(arenaK-1)),f=Math.min(.9,.4+.5*(G.gn-11)/89);
+   if(G.ch&&G.ep.got){const c=chaseDir(),pspd=300*(1+.5*(arenaK-1)),f=Math.min(.9,.4+.5*(G.gn-11)/189);
      G.ch.d+=pspd*f*dt;
      if((P.x-ep.x)*c.ux+(P.y-ep.y)*c.uy<G.ch.d+P.r){P.hp=0;G.flash=1;G.shake=30;die();return}}
    if(ep.got&&G.kills>=G.need){const h=homePos();if(hyp(P.x-h[0],P.y-h[1])<46)finishGame()}}
@@ -792,7 +804,7 @@ function play(dt){
   G.supT-=wdt;
   if(G.supT<=0){
     G.supT=rnd(3.5,6);
-    if(PR.filter(p=>!p.dead).length<12+D.t*2)addProp(Math.random()<.5?'barrel':'safe',rnd(60,W-60),rnd(60,H-60));
+    if(PR.filter(p=>!p.dead).length<12+D.t)addProp(Math.random()<.5?'barrel':'safe',rnd(60,W-60),rnd(60,H-60));
   }
 
   G.saveT+=dt;if(G.saveT>4){G.saveT=0;saveSafe()}
@@ -831,52 +843,150 @@ function txt(s,x,y,sz,col,al,glow){
   ctx.fillText(s,x,y);ctx.shadowBlur=0;
 }
 
+
+/* ---------- per-city visual styles: every city = new ship shapes, crates, barrels, background + colors ---------- */
+const GR=[17,1,2,3,4,5,6,7,8,9,1,11,12,13,2,3,6,9,7,5];      /* grunt ship shape per city (city 1 = best premium design) */
+const HV=[14,15,16], DR=[5,12,10,4];                          /* heavy / drone shapes cycle */
+const PL=[0,9,7,13,3,11,2,8,6,1,4,7,13,9,3,11,2,8,6,0];     /* player ship shape per city */
+const CRS=[0,1,2,3,4,5,6,7,8,9,10,11,3,7,1,5,9,2,6,11];     /* crate style per city */
+const BRS=[0,1,2,3,4,5,6,7,8,9,10,11,5,9,3,7,1,11,4,8];     /* barrel style per city */
+const SPIN={5:1,10:1,12:1};
+function starP(n,R,r,rot){ctx.beginPath();for(let i=0;i<n*2;i++){const rr=i%2?r:R,a=rot+i*Math.PI/n,px=Math.cos(a)*rr,py=Math.sin(a)*rr;i?ctx.lineTo(px,py):ctx.moveTo(px,py)}ctx.closePath()}
+function rectP(a,b){ctx.beginPath();ctx.rect(-a,-(b||a),2*a,2*(b||a))}
+
 function drawBG(){
+  const t=D?D.t:0;
   const g=ctx.createLinearGradient(0,0,0,H);g.addColorStop(0,TH.bg1);g.addColorStop(1,TH.bg2);
   ctx.fillStyle=g;ctx.fillRect(0,0,W,H);
+  const rg=ctx.createRadialGradient(W/2,H/2,0,W/2,H/2,Math.max(W,H)*.6);rg.addColorStop(0,`rgba(${TH.ac2r},.16)`);rg.addColorStop(1,`rgba(${TH.ac2r},0)`);
+  ctx.fillStyle=rg;ctx.fillRect(0,0,W,H);
   ctx.fillStyle=TH.star;
   for(const s of STARS){
-    const x=(((s.x*W-bgx*s.z*.4)%W)+W)%W;
+    const x=(((s.x*W-bgx*s.z*.4)%W)+W)%W,y=s.y*H,z=1.6*s.z+.6;
     ctx.globalAlpha=.25+.5*Math.abs(Math.sin(s.p+G.t*s.z));
-    ctx.fillRect(x,s.y*H,1.6*s.z+.6,1.6*s.z+.6);
+    const m=t%3;
+    if(m===0)ctx.fillRect(x,y,z,z);
+    else if(m===1){ctx.beginPath();ctx.arc(x,y,z*.8,0,TAU);ctx.fill()}
+    else{ctx.fillRect(x-z*1.6,y,z*3.2,z*.7);ctx.fillRect(x,y-z*1.6,z*.7,z*3.2)}
   }
   ctx.globalAlpha=1;
-  ctx.strokeStyle=`rgba(${TH.acr},.08)`;ctx.lineWidth=1;ctx.beginPath();
-  const o=(((-bgx*.6)%80)+80)%80;
-  for(let x=o;x<W;x+=80){ctx.moveTo(x,0);ctx.lineTo(x,H)}
-  for(let y=0;y<H;y+=80){ctx.moveTo(0,y);ctx.lineTo(W,y)}
-  ctx.stroke();
+  ctx.strokeStyle=`rgba(${TH.acr},.09)`;ctx.fillStyle=`rgba(${TH.acr},.16)`;ctx.lineWidth=1;
+  const o=(((-bgx*.6)%80)+80)%80,o6=(((-bgx*.6)%60)+60)%60;
+  switch(t%8){
+    case 0:ctx.beginPath();for(let x=o;x<W;x+=80){ctx.moveTo(x,0);ctx.lineTo(x,H)}for(let y=0;y<H;y+=80){ctx.moveTo(0,y);ctx.lineTo(W,y)}ctx.stroke();break;
+    case 1:ctx.beginPath();for(let x=-H+o;x<W;x+=70){ctx.moveTo(x,0);ctx.lineTo(x+H,H)}ctx.stroke();break;
+    case 2:{const s=44,hy=s*1.732,ox=-((bgx*.3)%(s*3));ctx.beginPath();
+      for(let i=-2;ox+i*1.5*s<W+s;i++){const x=ox+i*1.5*s;for(let y=((i%2)?hy/2:0)-hy;y<H+hy;y+=hy){for(let k=0;k<6;k++){const a=k*Math.PI/3,px=x+Math.cos(a)*s,py=y+Math.sin(a)*s;k?ctx.lineTo(px,py):ctx.moveTo(px,py)}ctx.closePath()}}
+      ctx.stroke();break}
+    case 3:for(let x=o6;x<W;x+=60)for(let y=10;y<H;y+=60)ctx.fillRect(x,y,3,3);break;
+    case 4:{const mr=hyp(W,H)/2;ctx.beginPath();for(let r=((bgx*.25)%90)+1;r<mr;r+=90){ctx.moveTo(W/2+r,H/2);ctx.arc(W/2,H/2,r,0,TAU)}ctx.stroke();break}
+    case 5:ctx.beginPath();for(let x=o6;x<W;x+=40){ctx.moveTo(x,0);ctx.lineTo(x,H)}ctx.stroke();break;
+    case 6:ctx.beginPath();for(let y=20;y<H;y+=60){let up=0;ctx.moveTo(o6-80,y);for(let x=o6-80;x<W+80;x+=30){up^=1;ctx.lineTo(x+30,y+(up?16:0))}}ctx.stroke();break;
+    case 7:ctx.beginPath();for(let x=o;x<W;x+=70)for(let y=20;y<H;y+=70){ctx.moveTo(x-6,y);ctx.lineTo(x+6,y);ctx.moveTo(x,y-6);ctx.lineTo(x,y+6)}ctx.stroke();break;
+  }
 }
 
-function drawObj(k,x,y,rot,fuse,s){
-  s=s||1;
-  ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(s,s);
-  const col=ICOL[k];neon(col,19);ctx.lineWidth=4;ctx.strokeStyle='#fff';
-  if(k==='safe'){
-    ctx.fillStyle='rgba(25,45,110,.92)';ctx.fillRect(-18,-18,36,36);ctx.strokeRect(-18,-18,36,36);
-    noGlow();ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(-18,-18);ctx.lineTo(18,18);ctx.moveTo(18,-18);ctx.lineTo(-18,18);ctx.stroke();
-    ctx.fillStyle=col;circ(0,0,5);ctx.fill();
-  }else if(k==='barrel'){
-    const fl=fuse>=0&&Math.floor(G.t*30)%2===0;
-    ctx.fillStyle=fl?'#fff':'rgba(30,60,10,.95)';circ(0,0,15);ctx.fill();ctx.stroke();
-    noGlow();ctx.strokeStyle=fl?'#f60':col;ctx.lineWidth=2.5;
-    ctx.beginPath();ctx.moveTo(-9,-3);ctx.lineTo(9,-3);ctx.moveTo(-9,3);ctx.lineTo(9,3);ctx.stroke();
-  }else if(k==='drone'){
-    poly(0,0,4,12,0);ctx.fillStyle='rgba(50,10,70,.95)';ctx.fill();ctx.stroke();
-  }else{
-    ctx.fillStyle=col;circ(0,0,6);ctx.fill();
+function crate(id,col){
+  const cr=hexRgb(col);
+  const body=()=>{ctx.fillStyle='#0a0f24';ctx.fill();ctx.fillStyle='rgba('+cr+',.2)';ctx.fill();ctx.stroke()};
+  switch(id){
+    case 0:{rectP(18);body();noGlow();ctx.strokeStyle=col;ctx.lineWidth=2;poly(0,0,4,13,Math.PI/4);ctx.stroke();
+      ctx.lineWidth=3;ctx.strokeStyle='#fff';for(const[sx,sy]of[[1,1],[1,-1],[-1,1],[-1,-1]]){ctx.beginPath();ctx.moveTo(sx*18,sy*10);ctx.lineTo(sx*18,sy*18);ctx.lineTo(sx*10,sy*18);ctx.stroke()}
+      ctx.fillStyle=col;ctx.globalAlpha=.55+.45*Math.sin(G.t*6);circ(0,0,7);ctx.fill();ctx.globalAlpha=1;ctx.fillStyle='#fff';circ(0,0,3);ctx.fill();break}
+    case 1:{rectP(18);body();noGlow();ctx.lineWidth=2;ctx.strokeStyle='#fff';ctx.beginPath();ctx.moveTo(-18,-18);ctx.lineTo(18,18);ctx.moveTo(18,-18);ctx.lineTo(-18,18);ctx.stroke();ctx.fillStyle=col;circ(0,0,5);ctx.fill();break}
+    case 2:{poly(0,0,6,19,0);body();noGlow();ctx.strokeStyle=col;ctx.lineWidth=2;poly(0,0,6,10,0);ctx.stroke();ctx.fillStyle=col;circ(0,0,3.5);ctx.fill();break}
+    case 3:{rectP(18);body();noGlow();ctx.strokeStyle=col;ctx.lineWidth=2;rectP(11);ctx.stroke();rectP(5);ctx.stroke();ctx.beginPath();ctx.moveTo(-18,0);ctx.lineTo(-11,0);ctx.moveTo(18,0);ctx.lineTo(11,0);ctx.moveTo(0,-18);ctx.lineTo(0,-11);ctx.moveTo(0,18);ctx.lineTo(0,11);ctx.stroke();break}
+    case 4:{poly(0,0,8,19,Math.PI/8);body();noGlow();ctx.strokeStyle=col;ctx.lineWidth=2.5;ctx.beginPath();ctx.moveTo(-10,0);ctx.lineTo(10,0);ctx.moveTo(0,-10);ctx.lineTo(0,10);ctx.stroke();break}
+    case 5:{rectP(18);body();noGlow();ctx.fillStyle=col;for(const[sx,sy]of[[1,1],[1,-1],[-1,1],[-1,-1]]){circ(sx*12,sy*12,2.6);ctx.fill()}ctx.strokeStyle=col;ctx.lineWidth=2.5;circ(0,0,7);ctx.stroke();break}
+    case 6:{ctx.beginPath();ctx.moveTo(0,-22);ctx.lineTo(17,0);ctx.lineTo(0,22);ctx.lineTo(-17,0);ctx.closePath();body();noGlow();ctx.strokeStyle=col;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(0,-22);ctx.lineTo(0,22);ctx.moveTo(-17,0);ctx.lineTo(17,0);ctx.stroke();break}
+    case 7:{poly(0,0,3,22,-Math.PI/2);body();noGlow();ctx.strokeStyle=col;ctx.lineWidth=2;poly(0,0,3,10,-Math.PI/2);ctx.stroke();ctx.fillStyle=col;circ(0,0,3);ctx.fill();break}
+    case 8:{starP(6,21,10,0);body();noGlow();ctx.fillStyle=col;circ(0,0,4.5);ctx.fill();break}
+    case 9:{rectP(18);body();noGlow();ctx.strokeStyle=col;ctx.lineWidth=2.5;circ(0,0,12);ctx.stroke();ctx.fillStyle=col;circ(0,0,4);ctx.fill();break}
+    case 10:{rectP(18);body();noGlow();ctx.strokeStyle=col;ctx.lineWidth=3;ctx.beginPath();for(const d of[-10,0,10]){ctx.moveTo(-18+Math.max(0,d),-18-Math.min(0,d)+ (d<0?0:0));}ctx.stroke();ctx.beginPath();ctx.moveTo(-18,-8);ctx.lineTo(8,18);ctx.moveTo(-18,2);ctx.lineTo(-2,18);ctx.moveTo(-8,-18);ctx.lineTo(18,8);ctx.moveTo(2,-18);ctx.lineTo(18,-2);ctx.stroke();break}
+    default:{rectP(18);body();noGlow();ctx.strokeStyle=col;ctx.lineWidth=2.5;ctx.save();ctx.rotate(Math.PI/4);rectP(12);ctx.stroke();ctx.restore();ctx.fillStyle=col;circ(0,0,3.5);ctx.fill()}
   }
+}
+function barrel(id,col,fl){
+  const cr=hexRgb(col),sc=fl?'#f60':col;
+  const body=()=>{ctx.fillStyle=fl?'#fff':'#0b140a';ctx.fill();if(!fl){ctx.fillStyle='rgba('+cr+',.22)';ctx.fill()}ctx.stroke()};
+  switch(id){
+    case 0:{circ(0,0,15);body();noGlow();ctx.strokeStyle=sc;ctx.lineWidth=2;ctx.setLineDash([5,4]);ctx.lineDashOffset=-G.t*14;circ(0,0,10.5);ctx.stroke();ctx.setLineDash([]);
+      ctx.lineWidth=2.5;ctx.beginPath();ctx.moveTo(-14,0);ctx.lineTo(-10,0);ctx.moveTo(14,0);ctx.lineTo(10,0);ctx.stroke();
+      ctx.fillStyle=sc;ctx.globalAlpha=.6+.4*Math.sin(G.t*7);circ(0,0,5);ctx.fill();ctx.globalAlpha=1;ctx.fillStyle='#fff';circ(0,0,2);ctx.fill();break}
+    case 1:{circ(0,0,15);body();noGlow();ctx.strokeStyle=sc;ctx.lineWidth=2.5;ctx.beginPath();ctx.moveTo(-9,-3);ctx.lineTo(9,-3);ctx.moveTo(-9,3);ctx.lineTo(9,3);ctx.stroke();break}
+    case 2:{circ(0,0,11);body();noGlow();ctx.strokeStyle=sc;ctx.lineWidth=3;ctx.beginPath();for(let i=0;i<8;i++){const a=i*TAU/8;ctx.moveTo(Math.cos(a)*11,Math.sin(a)*11);ctx.lineTo(Math.cos(a)*17,Math.sin(a)*17)}ctx.stroke();ctx.fillStyle=sc;circ(0,0,3.5);ctx.fill();break}
+    case 3:{circ(0,0,15);body();noGlow();ctx.fillStyle=sc;for(let i=0;i<3;i++){ctx.beginPath();ctx.moveTo(0,0);ctx.arc(0,0,11,i*TAU/3-.5,i*TAU/3+.5);ctx.closePath();ctx.fill()}ctx.fillStyle='#0b140a';circ(0,0,2.5);ctx.fill();break}
+    case 4:{circ(0,0,13);body();noGlow();ctx.strokeStyle=sc;ctx.lineWidth=3;ctx.beginPath();ctx.moveTo(6,-11);ctx.quadraticCurveTo(12,-17,17,-13);ctx.stroke();ctx.fillStyle='#ffd23a';circ(17,-13,2.8);ctx.fill();ctx.fillStyle='rgba(255,255,255,.35)';circ(-4,-4,3);ctx.fill();break}
+    case 5:{poly(0,0,6,15,Math.PI/6);body();noGlow();ctx.strokeStyle=sc;ctx.lineWidth=2;poly(0,0,6,8,Math.PI/6);ctx.stroke();break}
+    case 6:{circ(0,0,15);body();noGlow();ctx.strokeStyle=sc;ctx.lineWidth=2;circ(0,0,9);ctx.stroke();ctx.fillStyle=sc;circ(0,0,4);ctx.fill();break}
+    case 7:{circ(0,0,15);body();noGlow();ctx.strokeStyle=sc;ctx.lineWidth=2.2;ctx.beginPath();for(let t=0;t<=12.5;t+=.3){const r=1+t*1.0,a=t+G.t*2,px=Math.cos(a)*r,py=Math.sin(a)*r;t?ctx.lineTo(px,py):ctx.moveTo(px,py)}ctx.stroke();break}
+    case 8:{circ(0,0,15);body();noGlow();ctx.fillStyle=sc;circ(-5,-3,3);ctx.fill();circ(5,-3,3);ctx.fill();ctx.strokeStyle=sc;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(-6,6);ctx.lineTo(6,6);ctx.moveTo(-3,4);ctx.lineTo(-3,8);ctx.moveTo(0,4);ctx.lineTo(0,8);ctx.moveTo(3,4);ctx.lineTo(3,8);ctx.stroke();break}
+    case 9:{circ(0,0,10);body();noGlow();ctx.strokeStyle=sc;ctx.lineWidth=2.5;ctx.beginPath();for(let i=0;i<12;i++){const a=i*TAU/12;ctx.moveTo(Math.cos(a)*11,Math.sin(a)*11);ctx.lineTo(Math.cos(a)*16,Math.sin(a)*16)}ctx.stroke();break}
+    case 10:{rectP(12,14);body();noGlow();ctx.strokeStyle=sc;ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(-12,-7);ctx.lineTo(12,-7);ctx.moveTo(-12,7);ctx.lineTo(12,7);ctx.stroke();circ(0,0,4.5);ctx.stroke();break}
+    default:{circ(0,0,15);body();noGlow();ctx.strokeStyle=sc;ctx.lineWidth=3;ctx.lineJoin='round';ctx.beginPath();ctx.moveTo(3,-10);ctx.lineTo(-3,-1);ctx.lineTo(3,1);ctx.lineTo(-3,10);ctx.stroke()}
+  }
+}
+function droneObj(t,col){
+  const cr=hexRgb(col);
+  const body=()=>{ctx.fillStyle='#150a1c';ctx.fill();ctx.fillStyle='rgba('+cr+',.25)';ctx.fill();ctx.stroke()};
+  const m=t%4;
+  if(m===0)poly(0,0,4,12,0);else if(m===1)poly(0,0,3,13,0);else if(m===2)circ(0,0,10);else starP(5,13,6,0);
+  body();
+  if(m===2){noGlow();ctx.strokeStyle=col;ctx.lineWidth=2;circ(0,0,4);ctx.stroke()}
+}
+function drawObj(k,x,y,rot,fuse,s){
+  s=s||1;const t=D?D.t:0;
+  ctx.save();ctx.translate(x,y);ctx.rotate(rot);ctx.scale(s,s);
+  const col=ICOL[k];neon(col,19);ctx.lineWidth=4;ctx.strokeStyle='#fff';ctx.lineJoin='round';
+  if(k==='safe')crate(CRS[t],col);
+  else if(k==='barrel')barrel(BRS[t],col,fuse>=0&&Math.floor(G.t*30)%2===0);
+  else if(k==='drone')droneObj(t,col);
+  else{ctx.fillStyle=col;circ(0,0,6);ctx.fill()}
   noGlow();ctx.restore();
 }
 
+function enShape(id,c1,c2,st,f){
+  const g=ctx.createLinearGradient(-12,0,17,0);g.addColorStop(0,c2);g.addColorStop(1,c1);
+  ctx.fillStyle=f?'#fff':g;ctx.strokeStyle=f?'#fff':st;ctx.lineWidth=2.6;ctx.lineJoin='round';
+  const pp=pts=>{ctx.beginPath();pts.forEach((p,i)=>i?ctx.lineTo(p[0],p[1]):ctx.moveTo(p[0],p[1]));ctx.closePath()};
+  const fs=()=>{ctx.fill();ctx.stroke()};
+  const mir=pts=>pts.map(p=>[p[0],-p[1]]);
+  switch(id){
+    case 0:{pp([[17,0],[3,-5],[-9,-6],[-12,0],[-9,6],[3,5]]);fs();const w=[[5,-5],[-8,-17],[-13,-15],[-8,-5]];pp(w);fs();pp(mir(w));fs();
+      noGlow();ctx.fillStyle='rgba(255,255,255,.9)';ctx.beginPath();ctx.ellipse(3,0,5,2.4,0,0,TAU);ctx.fill();
+      const fl=6+4*Math.sin(G.t*30);ctx.fillStyle='#ffb02e';pp([[-12,-3],[-12-fl,0],[-12,3]]);ctx.fill();break}
+    case 1:pp([[15,0],[-11,-11],[-5,0],[-11,11]]);fs();break;
+    case 2:{const a=[[16,-13],[2,-15],[-10,-7],[-3,-4],[4,-9],[11,-10]];pp(a);fs();pp(mir(a));fs();circ(-2,0,5);fs();break}
+    case 3:pp([[18,0],[-2,-10],[-12,0],[-2,10]]);fs();noGlow();ctx.strokeStyle='rgba(255,255,255,.5)';ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(14,0);ctx.lineTo(-8,0);ctx.stroke();break;
+    case 4:poly(0,0,6,12,0);fs();pp([[19,0],[11,-4],[11,4]]);fs();break;
+    case 5:for(let i=0;i<4;i++){ctx.save();ctx.rotate(i*Math.PI/2);pp([[0,-3],[15,0],[0,3]]);fs();ctx.restore()}circ(0,0,4);fs();break;
+    case 6:{pp([[8,-8],[-10,-8],[-10,8],[8,8]]);fs();pp([[18,-8],[6,-10],[6,-5]]);fs();pp([[20,0],[6,-3],[6,3]]);fs();pp([[18,8],[6,5],[6,10]]);fs();break}
+    case 7:ctx.beginPath();ctx.ellipse(0,0,15,8,0,0,TAU);fs();ctx.beginPath();ctx.arc(2,0,6,-Math.PI/2,Math.PI/2);ctx.closePath();fs();noGlow();ctx.fillStyle='#fff';for(const y of[-6,0,6]){circ(-8,y,1.3);ctx.fill()}break;
+    case 8:pp([[14,0],[4,-4],[-2,-16],[-6,-8],[-10,-14],[-12,-4],[-8,0],[-12,4],[-10,14],[-6,8],[-2,16],[4,4]]);fs();break;
+    case 9:pp([[16,0],[2,-12],[-4,-12],[8,0],[-4,12],[2,12]]);fs();pp([[2,0],[-10,-9],[-14,-9],[-6,0],[-14,9],[-10,9]]);fs();break;
+    case 10:pp([[-4,-14],[4,-14],[4,-4],[14,-4],[14,4],[4,4],[4,14],[-4,14],[-4,4],[-14,4],[-14,-4],[-4,-4]]);fs();break;
+    case 11:poly(0,0,5,13,0);fs();noGlow();ctx.strokeStyle='rgba(255,255,255,.6)';ctx.lineWidth=1.3;poly(0,0,5,6,0);ctx.stroke();break;
+    case 12:for(let i=0;i<8;i++){ctx.save();ctx.rotate(i*TAU/8);pp([[8,-3.5],[16,0],[8,3.5]]);fs();ctx.restore()}circ(0,0,9);fs();break;
+    case 13:pp([[16,0],[-2,-18],[-6,-10],[-12,-6],[-8,0],[-12,6],[-6,10],[-2,18]]);fs();break;
+    case 14:{pp([[16,0],[8,-9],[-4,-12],[-12,-9],[-12,9],[-4,12],[8,9]]);fs();pp([[16,-6],[23,-6],[23,-3],[16,-3]]);fs();pp([[16,3],[23,3],[23,6],[16,6]]);fs();
+      noGlow();ctx.strokeStyle='rgba(255,255,255,.55)';ctx.lineWidth=1.3;ctx.beginPath();ctx.moveTo(8,-9);ctx.lineTo(8,9);ctx.moveTo(-4,-12);ctx.lineTo(-4,12);ctx.stroke();
+      const fl=5+3*Math.sin(G.t*25);ctx.fillStyle='#ffd23a';pp([[-12,-6],[-12-fl,-4],[-12,-2]]);ctx.fill();pp([[-12,2],[-12-fl,4],[-12,6]]);ctx.fill();break}
+    case 15:poly(0,0,6,14,0);fs();noGlow();ctx.strokeStyle='rgba(255,255,255,.6)';ctx.lineWidth=1.4;poly(0,0,6,8,0);ctx.stroke();ctx.fillStyle='#fff';for(let i=0;i<3;i++){circ(Math.cos(i*TAU/3)*11,Math.sin(i*TAU/3)*11,1.8);ctx.fill()}break;
+    case 16:poly(0,0,8,12,Math.PI/8);fs();for(let i=0;i<8;i++){const a=i*TAU/8+Math.PI/8;pp([[Math.cos(a-.2)*12,Math.sin(a-.2)*12],[Math.cos(a)*18,Math.sin(a)*18],[Math.cos(a+.2)*12,Math.sin(a+.2)*12]]);fs()}break;
+    case 17:{pp([[17,0],[4,-5],[-8,-7],[-12,-3],[-12,3],[-8,7],[4,5]]);fs();const w=[[6,-5],[-5,-17],[-13,-15],[-7,-5]];pp(w);fs();pp(mir(w));fs();
+      noGlow();ctx.fillStyle='#fff';circ(-10,-16,2);ctx.fill();circ(-10,16,2);ctx.fill();ctx.strokeStyle='rgba(255,255,255,.6)';ctx.lineWidth=1.2;ctx.beginPath();ctx.moveTo(14,0);ctx.lineTo(-10,0);ctx.stroke();
+      const fl=5+3*Math.sin(G.t*25+1);ctx.fillStyle='#ffd23a';pp([[-12,-2.5],[-12-fl,0],[-12,2.5]]);ctx.fill();break}
+  }
+}
 function drawEnemy(e){
-  const a=Math.atan2(P.y-e.y,P.x-e.x),col=ECOL[e.t],f=e.fl>0,k=e.t==='heavy'?1.5:e.t==='drone'?.8:1;
-  ctx.save();ctx.translate(e.x,e.y);ctx.rotate(a);ctx.scale(k,k);   /* same triangle ship as the player, facing the player */
-  neon(col,20);
-  const g=ctx.createLinearGradient(-10,0,16,0);g.addColorStop(0,'rgba(20,6,24,.9)');g.addColorStop(1,col);
-  ctx.fillStyle=f?'#fff':g;ctx.strokeStyle=f?'#fff':col;ctx.lineWidth=2.6;
-  ctx.beginPath();ctx.moveTo(15,0);ctx.lineTo(-11,-11);ctx.lineTo(-5,0);ctx.lineTo(-11,11);ctx.closePath();ctx.fill();ctx.stroke();
-  noGlow();ctx.fillStyle='#fff';circ(1,0,4.2);ctx.fill();ctx.strokeStyle='#06101d';ctx.lineWidth=1.2;circ(1,0,4.2);ctx.stroke();
+  const a=Math.atan2(P.y-e.y,P.x-e.x),col=ECOL[e.t],f=e.fl>0,k=e.t==='heavy'?1.5:e.t==='drone'?.8:1,t=D?D.t:0;
+  const id=e.t==='heavy'?HV[t%3]:e.t==='drone'?DR[t%4]:GR[t];
+  ctx.save();ctx.translate(e.x,e.y);ctx.rotate(SPIN[id]?G.t*3+e.ph:a);ctx.scale(k,k);
+  neon(col,(id===17||id===14)?28:20);
+  enShape(id,col,'rgba(20,6,24,.9)',col,f);
+  noGlow();
+  if(e.t==='heavy'){ctx.strokeStyle='rgba(255,255,255,.5)';ctx.lineWidth=1.3;ctx.setLineDash([4,5]);ctx.lineDashOffset=-G.t*10;circ(0,0,19);ctx.stroke();ctx.setLineDash([])}
+  ctx.fillStyle='#fff';circ(1,0,4.2);ctx.fill();ctx.strokeStyle='#06101d';ctx.lineWidth=1.2;circ(1,0,4.2);ctx.stroke();
   ctx.restore();
   if(e.hp<e.mhp){
     ctx.fillStyle='rgba(0,0,0,.6)';ctx.fillRect(e.x-16,e.y-e.r-12,32,4);
@@ -912,7 +1022,7 @@ function drawEndPoint(){
   }else{
     const hx=homePos()[0],hy=homePos()[1],ready=G.kills>=G.need,c=ready?'#5dff9a':'#6a7a90';
     ctx.save();neon(c,ready?24:4);ctx.lineWidth=3;ctx.strokeStyle=c;ctx.setLineDash([10,8]);ctx.lineDashOffset=-t*20;circ(hx,hy,46);ctx.stroke();ctx.restore();
-    txt(ready?'RETURN HERE':'KILL '+(G.need-G.kills)+' MORE',hx,hy+(LAY()==='V'?62:-62),14,c,'center',ready?c:null);
+    txt(ready?'RETURN HERE':'KILL '+(G.need-G.kills)+' MORE',hx,hy-62,14,c,'center',ready?c:null);
   }
 }
 
@@ -961,8 +1071,7 @@ function drawPlayer(){
   const c1=skinCol(),c2=skinCol2();
   neon(c1,20);
   const g=ctx.createLinearGradient(-10,0,16,0);g.addColorStop(0,c2);g.addColorStop(1,c1);
-  ctx.fillStyle=g;ctx.strokeStyle='#fff';ctx.lineWidth=2.6;
-  ctx.beginPath();ctx.moveTo(15,0);ctx.lineTo(-11,-11);ctx.lineTo(-5,0);ctx.lineTo(-11,11);ctx.closePath();ctx.fill();ctx.stroke();
+  enShape(PL[D?D.t:0],c1,c2,'#fff',false);
   noGlow();ctx.fillStyle='#fff';circ(1,0,4.2);ctx.fill();ctx.strokeStyle='#06101d';ctx.lineWidth=1.2;circ(1,0,4.2);ctx.stroke();
   ctx.restore();
 }
