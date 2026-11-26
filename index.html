@@ -489,7 +489,10 @@ function spawnEnemy(){
   const t=D.t,r=Math.random();let type='grunt';
   if(G.gn>=3&&r<.18)type='drone';
   else if(t>=1&&r>1-(.14+Math.min(.16,t*.03)))type='heavy';
-  const rad=type==='heavy'?20:type==='drone'?11:14,[x,y]=edgePos(rad);
+  const rad=type==='heavy'?20:type==='drone'?11:14;
+  let x=0,y=0,ok=false;
+  for(let i=0;i<6&&!ok;i++){[x,y]=edgePos(rad);ok=hyp(x-P.x,y-P.y)>230}   /* far-side edge only, never on top of the player */
+  if(!ok)return null;
   const e=addE(type,x,y);burst(x,y,ECOL[type],16,240,.45);return e;
 }
 function startRun(){
