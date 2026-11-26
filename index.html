@@ -217,8 +217,8 @@ function T(k,...a){
 const CITIES2={en:['SAKURA STORM','DEEP OCEAN','SOLAR FLARE','JADE TEMPLE','CRIMSON DESERT','CYBER PUNK','AURORA','STORM CLOUD','VOID RIFT','INFINITY'],
 ar:['عاصفة الساكورا','أعماق المحيط','توهج الشمس','معبد اليشم','الصحراء القرمزية','سايبر بانك','الشفق القطبي','سحابة العاصفة','صدع الفراغ','اللانهاية']};
 const cityName=t=>{t=Math.max(0,Math.min(19,t|0));if(t<10)return((L[LANG]&&L[LANG].cities)||L.en.cities)[t];return(CITIES2[LANG]||CITIES2.en)[t-10]};
-const LBX={en:{lb:'TOP 10 PLAYERS',save:'SAVE',inTop:'🏆 YOU ARE IN THE TOP 10!',outTop:'Beat the top 10 to get on the board!',local:'Scores are saved on this device only',loading:'Loading...',fail:"Can't load the ranking",empty:'No scores yet — be the first!',rev:'SECOND CHANCE!',cb:'+{0} ◈ CITY BONUS',nameH:'YOUR NAME'},
-ar:{lb:'أفضل 10 لاعبين',save:'حفظ',inTop:'🏆 أنت ضمن أفضل 10!',outTop:'تخطَّ أفضل 10 لتدخل القائمة!',local:'النتائج محفوظة على هذا الجهاز فقط',loading:'جارٍ التحميل...',fail:'تعذر تحميل الترتيب',empty:'لا توجد نتائج بعد — كن الأول!',rev:'فرصة ثانية!',cb:'+{0} ◈ مكافأة المدينة',nameH:'اسمك'}};
+const LBX={en:{ready:'GET READY...',recharge:'ENERGY RECHARGING',orbEmpty:'ORBIT EMPTY - PULL LOOT FIRST',lb:'TOP 10 PLAYERS',save:'SAVE',inTop:'🏆 YOU ARE IN THE TOP 10!',outTop:'Beat the top 10 to get on the board!',local:'Scores are saved on this device only',loading:'Loading...',fail:"Can't load the ranking",empty:'No scores yet — be the first!',rev:'SECOND CHANCE!',cb:'+{0} ◈ CITY BONUS',nameH:'YOUR NAME'},
+ar:{ready:'استعد...',recharge:'الطاقة تُشحن',orbEmpty:'المدار فارغ - اسحب الغنائم أولاً',lb:'أفضل 10 لاعبين',save:'حفظ',inTop:'🏆 أنت ضمن أفضل 10!',outTop:'تخطَّ أفضل 10 لتدخل القائمة!',local:'النتائج محفوظة على هذا الجهاز فقط',loading:'جارٍ التحميل...',fail:'تعذر تحميل الترتيب',empty:'لا توجد نتائج بعد — كن الأول!',rev:'فرصة ثانية!',cb:'+{0} ◈ مكافأة المدينة',nameH:'اسمك'}};
 const tx=(k,...a)=>{let v=(LBX[LANG]&&LBX[LANG][k])||LBX.en[k]||k;return v.replace(/\{(\d+)\}/g,(m,i)=>a[i]!==undefined?a[i]:m)};
 const UPGTXT={en:{
 spd:['MOVE SPEED','+8% ship speed'],hpx:['EXTRA HEART','+1 max health'],regen:['ENERGY REGEN','Recharge energy faster'],pow:['IMPACT POWER','+12% damage'],blast:['BLAST RADIUS','+8% explosion size'],pullf:['PULL FORCE','Stronger gravity pull'],ctime:['COMBO TIMER','+0.25s combo time'],coinb:['COIN BOOST','+10% coins'],scoreb:['SCORE BOOST','+8% score'],shield:['SHIELD TIME','Longer safety after a hit'],eff:['EFFICIENCY','Pull uses less energy'],slow:['TIME DRAG','Enemies move slower'],reach:['LONG REACH','Pull reaches farther'],lspd:['LAUNCH SPEED','Faster launches'],bounce:['RICOCHET','+1 wall bounce'],kgain:['KILL CHARGE','More energy per kill'],allies:['ALLY DRONES','+1 defender that shoots and blocks bullets'],admg:['ALLY DAMAGE','Stronger ally shots'],afire:['ALLY FIRE RATE','Allies shoot faster'],heartk:['HEART DROPS','Free hearts come sooner'],lucky:['LUCKY DROPS','More crates and barrels'],revive:['SECOND CHANCE','Revive once per run']},
@@ -476,14 +476,15 @@ function addE(t,x,y){
 }
 function addProp(k,x,y){PR.push({k,x,y,vx:0,vy:0,r:k==='safe'?22:15,fuse:-1,dead:false,rot:rnd(0,6),vr:rnd(-1,1)})}
 /* SWAPPED SIDES: player lives on the LEFT, every enemy enters from the RIGHT edge */
-/* layout: 'V' portrait = player TOP / enemies BOTTOM; 'R' rotated-portrait = same on screen; 'L' landscape = player RIGHT / enemies LEFT */
+/* layout: 'V' portrait = player BOTTOM / enemies TOP; 'R' rotated-portrait = player RIGHT / enemies LEFT; 'L' landscape = player LEFT / enemies RIGHT */
 const LAY=()=>ROT?'R':(VW<VH?'V':'L');
 const homePos=()=>{const l=LAY(),m=l==='V'?Math.min(90,H*.08):Math.min(90,W*.08);return l==='V'?[W/2,H-m]:l==='R'?[W-m,H/2]:[m,H/2]};
 const epPos=()=>{const l=LAY(),m=l==='V'?Math.max(70,H*.14):Math.max(70,W*.14);return l==='V'?[W/2,m]:l==='R'?[m,H/2]:[W-m,H/2]};
 function edgePos(r){const l=LAY();return l==='V'?[rnd(r+4,W-r-4),r+6]:l==='R'?[r+6,rnd(r+4,H-r-4)]:[W-r-6,rnd(r+4,H-r-4)]}
 const QUOTAS=Array.from({length:20},(_,i)=>5+2*i);          /* kills needed: +2 every city */
 const quotaFor=g=>QUOTAS[Math.max(0,Math.min(19,tierOf(g)))];
-function epOpenNow(){return D.t===0||G.kills>=G.need}   /* games 1-10: open from start; later: after the quota */
+function epOpenNow(){return D.t===0||G.kills>=G.need}
+function questMet(){return G.gn<=10||G.kills>=G.need}   /* games 1-10: quota shown but not required to finish */   /* games 1-10: open from start; later: after the quota */
 function spawnEnemy(){
   const t=D.t,r=Math.random();let type='grunt';
   if(G.gn>=3&&r<.18)type='drone';
@@ -497,7 +498,7 @@ function startRun(){
   G.state='play';G.paused=false;
   E=[];B=[];PR=[];S=[];X=[];PT=[];PP=[];orbit=[];
   Object.assign(P,{x:homePos()[0],y:homePos()[1],kx:0,ky:0,hp:maxHp(),inv:1,en:maxEn(),holding:false,lock:true,launchT:0,lt:0,exh:false});
-  Object.assign(G,{ts:.05,hs:0,shake:0,flash:0,combo:0,comboT:0,chain:0,chainT:0,score:0,earned:0,kills:0,gt:0,spT:1.5,supT:4,newBest:false,cb:null,spd:D.spd,ch:null,rev:SAVE.revive|0,need:G.gn<=10?0:quotaFor(G.gn),ep:{x:epPos()[0],y:epPos()[1],r:34,got:false,was:false,t:0}});
+  Object.assign(G,{ts:.05,hs:0,shake:0,flash:0,combo:0,comboT:0,chain:0,chainT:0,score:0,earned:0,kills:0,gt:0,spT:1.5,supT:4,newBest:false,cb:null,spd:D.spd,ch:null,rev:SAVE.revive|0,need:quotaFor(G.gn),ep:{x:epPos()[0],y:epPos()[1],r:34,got:false,was:false,t:0}});
   IN.down=false;
   AL=[];AB=[];for(let i=0;i<(SAVE.allies|0);i++)AL.push({x:P.x,y:P.y,ang:0,cd:rnd(0,1)});
   for(let i=0,n0=Math.min(12,2+D.t);i<n0;i++)spawnEnemy();
@@ -570,7 +571,7 @@ function finishGame(){
   save();lbUpdate();sfx.win();confetti(60);
   const lvlUp=!won&&SAVE.games%10===0;
   G.cityBonus=0;if(lvlUp){G.cityBonus=250*(tierOf(SAVE.games)+1);SAVE.credits+=G.cityBonus;save()}
-  G.banner={txt:'GAME COMPLETE!',sub:won||lvlUp?'':'Next game starting...',t:1.6};
+  G.banner=(won||lvlUp)?null:{txt:'GAME COMPLETE!',sub:'Next game starting...',t:1.6};
   setTimeout(()=>{
     if(G.state!=='done')return;
     if(won)showWin();else if(lvlUp)showLevelUp();else startRun();
@@ -607,8 +608,13 @@ function beamUpdate(e,ang,wdt,done){
 }
 
 /* ---------------- Launch ---------------- */
+function noFire(key,flash){
+  if(P.fbT>0)return;
+  P.fbT=.9;if(flash)G.eflash=.6;
+  popup(P.x,P.y-34,tx(key),flash?'#ff9a2b':TH.ac2,20);sfx.ui();
+}
 function launch(){
-  const n=orbit.length;if(!n)return;let tot=0;
+  const n=orbit.length;if(!n){noFire('orbEmpty',false);return}let tot=0;
   for(let i=0;i<n;i++){
     const o=orbit[i],spread=(i-(n-1)/2)/n*.95+(Math.random()-.5)*.1,a=P.aim+spread,sp=(o.k==='safe'?900:1150)*rnd(.9,1.1)*(1+.06*SAVE.lspd);
     S.push({id:++SID,k:o.k,x:o.x,y:o.y,vx:Math.cos(a)*sp,vy:Math.sin(a)*sp,r:{safe:20,barrel:14,drone:12,bullet:6}[o.k],life:2.4,b:1+SAVE.bounce,rot:o.rot||0,done:false,cool:0,last:null});
@@ -703,7 +709,10 @@ function play(dt){
   P.aim=Math.atan2(IN.my-P.y,IN.mx-P.x);
 
   const want=(IN.down||k.Space)&&!P.lock;
+  P.fbT=Math.max(0,(P.fbT||0)-dt);G.eflash=Math.max(0,(G.eflash||0)-dt);
+  if((IN.down||k.Space)&&P.lock&&!P.holding)noFire('ready',false);
   if(!want)P.exh=false;
+  if(want&&!P.holding&&(P.exh||P.en<=8))noFire('recharge',true);
   if(want&&!P.holding&&!P.exh&&P.en>8){P.holding=true;sfx.hold()}
   if(P.holding&&G.tut&&G.tut.moveDone&&!G.tut.holdDone){G.tut.holdDone=true;tutorialAction(2)}
   if(!want&&P.holding){P.holding=false;if(G.tut&&G.tut.holdDone)tutorialAction(3);launch()}
@@ -775,6 +784,8 @@ function play(dt){
   G.comboT-=dt;if(G.comboT<=0&&G.combo>0)G.combo=0;
 
   updateEnemies(dt,wdt);updateAllies(dt);
+  {const l=LAY();for(const e of E){if(e.dead)continue;
+    if(l==='L')e.x=Math.max(e.x,P.x);else if(l==='R')e.x=Math.min(e.x,P.x);else e.y=Math.min(e.y,P.y)}}
 
   /* enemy bullets */
   for(const b of B){
@@ -827,7 +838,7 @@ function play(dt){
    if(G.ch&&G.ep.got){const c=chaseDir(),pspd=300*(1+.5*(arenaK-1)),f=Math.min(.9,.4+.5*(G.gn-11)/189);
      G.ch.d+=pspd*f*dt;
      if((P.x-ep.x)*c.ux+(P.y-ep.y)*c.uy<G.ch.d+P.r){P.hp=0;G.flash=1;G.shake=30;die();return}}
-   if(ep.got&&G.kills>=G.need){const h=homePos();if(hyp(P.x-h[0],P.y-h[1])<46)finishGame()}}
+   if(ep.got&&questMet()){const h=homePos();if(hyp(P.x-h[0],P.y-h[1])<46)finishGame()}}
   /* endless spawner: faster + tougher with game number and time */
   G.spT-=wdt;
   if(G.spT<=0){
@@ -1072,7 +1083,7 @@ function drawEndPoint(){
     ctx.restore();
     txt(open?'END POINT':'LOCKED',ep.x,ep.y+ep.r+16,13,open?'#ffd23a':'#8fb0cc','center',open?'#ffd23a':null);
   }else{
-    const hx=homePos()[0],hy=homePos()[1],ready=G.kills>=G.need,c=ready?'#5dff9a':'#6a7a90';
+    const hx=homePos()[0],hy=homePos()[1],ready=questMet(),c=ready?'#5dff9a':'#6a7a90';
     ctx.save();neon(c,ready?24:4);ctx.lineWidth=3;ctx.strokeStyle=c;ctx.setLineDash([10,8]);ctx.lineDashOffset=-t*20;circ(hx,hy,46);ctx.stroke();ctx.restore();
     txt(ready?'RETURN HERE':'KILL '+(G.need-G.kills)+' MORE',hx,hy-62,14,c,'center',ready?c:null);
   }
@@ -1208,6 +1219,7 @@ function drawHUD(){
   ctx.fillStyle='rgba(0,0,0,.5)';ctx.fillRect(16,56,ew,10);
   const eg=ctx.createLinearGradient(16,0,16+ew,0);eg.addColorStop(0,TH.ac);eg.addColorStop(1,sk);
   ctx.fillStyle=P.exh?'#664466':eg;ctx.fillRect(16,56,ew*clamp(P.en/me,0,1),10);
+  if(G.eflash>0){const fa=(Math.sin(G.eflash*40)>0?.9:.35)*Math.min(1,G.eflash*3);ctx.fillStyle='rgba(255,154,43,'+fa+')';ctx.fillRect(16,56,ew*clamp(P.en/me,0,1),10);ctx.strokeStyle='rgba(255,154,43,'+fa+')';ctx.lineWidth=2;ctx.strokeRect(14,54,ew+4,14)}
   ctx.strokeStyle=`rgba(${TH.acr},.55)`;ctx.lineWidth=1;ctx.strokeRect(16.5,56.5,ew,10);
   if(!narrow)txt(T('energy'),16+ew+8,61,11,'#8fb0cc','left');
   /* orbit slots */
@@ -1224,9 +1236,9 @@ function drawHUD(){
   ctx.strokeStyle=`rgba(${TH.ac2r},.55)`;ctx.strokeRect(16.5,H-33.5,160,8);
   txt(T('tflow'),16,H-48,11,'#8fb0cc','left');
   /* objective */
-  {const ok=G.kills>=G.need,ep=G.ep;
+  {const ok=questMet(),ep=G.ep,kd=G.kills>=G.need;
    const st=!ep?'':ep.got?(ok?'RETURN TO START':'KILL '+(G.need-G.kills)+' MORE'):(epOpenNow()?'GO TO END POINT':'END POINT LOCKED');
-   if(G.need>0)txt('KILLS '+Math.min(G.kills,G.need)+'/'+G.need,16,106,15,ok?'#5dff9a':'#fff','left',ok?'#5dff9a':TH.ac);
+   if(G.need>0)txt('KILLS '+Math.min(G.kills,G.need)+'/'+G.need,16,106,15,kd?'#5dff9a':'#fff','left',kd?'#5dff9a':TH.ac);
    if(st)txt(st,16,126,12,ok||(ep&&ep.got)?'#ffd23a':'#8fb0cc','left')}
   /* city / level / best / score / combo */
   txt(T('cityS',D.t+1),W/2,14,17,'#fff','center',TH.ac);
@@ -1330,7 +1342,7 @@ function fillLvl(){
   $('lSum').innerHTML=`${T('score')} <b>${G.lastScore}</b> · ${T('best',SAVE.hi)}<br><span class="gold">+${G.earned} ◈</span><br><span class="gold">${tx('cb',G.cityBonus||0)}</span><br><small>${T('cityS',t+1)} · ${T('lvS',SAVE.games+1)} · ${T('lvlNote')}</small>`;
 }
 function showLevelUp(){
-  applyTheme(tierOf(SAVE.games+1));fillLvl();
+  applyTheme(tierOf(SAVE.games+1));fillLvl();G.banner=null;
   show('lvl');sfx.win();G.flash=.8;confetti(180);
   for(let i=0;i<18;i++)setTimeout(()=>{if(!$('lvl').classList.contains('show'))return;const cols=[TH.ac,TH.ac2,'#ffd23a','#ffffff',TH.en[0]],c=cols[(Math.random()*cols.length)|0],x=rnd(W*.12,W*.88),y=rnd(H*.1,H*.55);burst(x,y,c,70,560,1.2);burst(x,y,'#fff',20,300,.6);sfx.boom(40)},i*260);
   for(let i=1;i<=4;i++)setTimeout(()=>{if($('lvl').classList.contains('show'))confetti(60)},i*700);
@@ -1340,7 +1352,7 @@ function fillWin(){
   $('wPlay').textContent=T('startP',SAVE.prestige);
 }
 function showWin(){
-  applyTheme(0);fillWin();
+  applyTheme(0);fillWin();G.banner=null;
   show('win');sfx.win();G.flash=.9;confetti(240);
   for(let i=1;i<=8;i++)setTimeout(()=>{if($('win').classList.contains('show'))confetti(80)},i*600);
 }
